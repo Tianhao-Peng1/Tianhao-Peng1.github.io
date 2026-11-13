@@ -214,7 +214,7 @@
 
   const newsList = document.getElementById('home-news-list');
   // Conference entries sort by their first day.
-  const newsEntries = [...newsList.children].map(entry => ({
+  const newsEntries = [...newsList.querySelectorAll(':scope > .home-exchange')].map(entry => ({
     entry,
     date: entry.querySelector('time').dateTime
   }));
@@ -272,7 +272,25 @@
 
   // ISO dates sort newest first, with less precise dates following their dated peers.
   newsEntries.sort((a, b) => b.date.localeCompare(a.date));
-  newsList.replaceChildren(...newsEntries.map(({ entry }) => entry));
+  const recentNewsCount = 6;
+  newsList.prepend(...newsEntries.slice(0, recentNewsCount).map(({ entry }) => entry));
+
+  const archive = document.getElementById('home-news-archive');
+  const newsYears = new Map();
+  for (const { entry, date } of newsEntries.slice(recentNewsCount)) {
+    const year = date.slice(0, 4);
+    if (!newsYears.has(year)) {
+      const group = document.createElement('details');
+      group.className = 'home-news-year';
+      const summary = document.createElement('summary');
+      summary.textContent = year;
+      group.append(summary);
+      newsYears.set(year, group);
+    }
+    newsYears.get(year).append(entry);
+  }
+  archive.querySelector('.home-news-archive-entries').append(...newsYears.values());
+  archive.hidden = newsYears.size === 0;
 
   // Match figures to the bibliography to preserve its order and separate paper counts from frameworks.
   const paperByTitle = new Map(papers.map((paper, index) => [paper.title, { ...paper, index }]));

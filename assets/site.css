@@ -259,6 +259,15 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .home-exchange button:hover { color: var(--beihang-blue); text-decoration: underline; }
 .home-publication .meta { margin-top: 3px; color: var(--muted); text-align: start; }
 .home-publication-summary { margin-top: 6px; color: #222; line-height: 1.5; }
+.home-news-archive > summary, .home-news-year > summary {
+  padding-block: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--blue-ink);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.home-news-archive-entries { padding-inline-start: 14px; }
 .home-demo { padding-block: 15px; }
 .home-demo figcaption { margin-top: 8px; color: #222; }
 .home-demo .demo-play {
@@ -400,6 +409,8 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .team-panel-heading { margin-bottom: 18px; }
 .team-student-groups { display: grid; gap: 22px; }
 .team-student-group h3 { margin-bottom: 10px; }
+.team-alumni-group + .team-alumni-group { margin-top: 20px; }
+.team-alumni-group > h4 { margin-bottom: 6px; }
 
 .team-member-grid, .team-alumni-list, .team-faculty-list {
   display: grid;
@@ -432,7 +443,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .team-member-portrait.is-placeholder img { width: 25px; height: 25px; opacity: 0.68; }
 .portrait-inset { transform: scale(1.35); transform-origin: 50% 25%; }
 :is(.team-alumnus, .team-faculty-member) .team-member-portrait { flex-basis: 59px; width: 59px; }
-.team-member h4, .team-alumnus h3, .team-faculty-member h4 { font-size: 14px; font-weight: 700; line-height: 18px; }
+.team-member h4, .team-alumnus h5, .team-faculty-member h4 { margin: 0; font-size: 14px; font-weight: 700; line-height: 18px; }
 .team-alumnus p, .team-faculty-member p { margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 18px; }
 .team-affiliation { color: var(--ink); }
 .team-photos { margin-top: 22px; }
@@ -715,7 +726,6 @@ dialog::backdrop { background: #031a35b8; }
   .masthead-photo { float: none; width: 100%; max-width: 420px; margin: 0 0 15px; }
   .masthead p { line-height: 21px; }
   .home-highlights { grid-template-columns: minmax(0, 1fr); gap: 25px; margin-top: 25px; }
-  #home-news-list { max-height: 74dvh; overflow: auto; }
   .patent-list .output-row { grid-template-columns: minmax(0, 1fr); }
 }
 
