@@ -13,6 +13,14 @@
   const publicationAnchors = new Map(
     [...document.querySelectorAll('#papers [data-publication-anchor]')].map(heading => ['#' + heading.id, heading])
   );
+  const teamTabList = document.querySelector('.team-tabs');
+  const teamTabs = [...teamTabList.querySelectorAll('[data-team-tab]')];
+  const leaderTab = document.getElementById('team-tab-leader');
+  const professorHeading = document.getElementById('wenjun-wu');
+  const professorHash = '#' + professorHeading.id;
+  const teamTabsByHash = new Map(teamTabs.map(tab => ['#' + tab.getAttribute('aria-controls'), tab]));
+  teamTabsByHash.set('#mentor', leaderTab);
+  teamTabsByHash.set(professorHash, leaderTab);
   const backToTop = document.querySelector('.footer-inner a');
   let currentLink;
 
@@ -30,21 +38,26 @@
   function showPage(focusContent = false) {
     if (window.location.hash === '#apply') history.replaceState(null, '', '#top');
     const fragment = window.location.hash;
-    const anchor = publicationAnchors.get(fragment);
-    const hash = anchor ? '#papers' : pages.has(fragment) ? fragment : '#top';
+    const teamTab = teamTabsByHash.get(fragment);
+    const publicationHeading = publicationAnchors.get(fragment);
+    const anchor = fragment === professorHash ? professorHeading : publicationHeading;
+    const sectionHash = teamTab ? '#mentor' : publicationHeading ? '#papers' : fragment;
+    const hash = pages.has(sectionHash) ? sectionHash : '#top';
     const page = pages.get(hash);
     for (const section of pages.values()) section.hidden = section !== page;
+    if (teamTab) activateTeamTab(teamTab);
     currentLink?.removeAttribute('aria-current');
     currentLink = links.find(link => link.hash === hash);
     currentLink.setAttribute('aria-current', 'page');
-    backToTop.setAttribute('href', hash);
+    backToTop.setAttribute('href', teamTab && teamTab !== leaderTab ? fragment : hash);
     setMenu(false);
     if (anchor) {
       syncHeaderOffset();
       anchor.focus({ preventScroll: true });
       anchor.scrollIntoView();
     } else if (focusContent) {
-      main.focus({ preventScroll: true });
+      const focusTarget = teamTab === leaderTab ? professorHeading : main;
+      focusTarget.focus({ preventScroll: true });
       window.scrollTo(0, 0);
     }
   }
@@ -76,7 +89,7 @@
   });
   document.addEventListener('click', event => {
     const link = event.target.closest('a[href^="#"]');
-    if (!link || (!pages.has(link.hash) && !publicationAnchors.has(link.hash)) ||
+    if (!link || (!pages.has(link.hash) && !teamTabsByHash.has(link.hash) && !publicationAnchors.has(link.hash)) ||
         event.defaultPrevented || event.button !== 0 ||
         event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
@@ -187,13 +200,18 @@
     });
   }
 
-  const teamTabList = document.querySelector('.team-tabs');
-  const teamTabs = [...teamTabList.querySelectorAll('[data-team-tab]')];
-  bindTabs(teamTabList, teamTabs, selected => {
+  function activateTeamTab(selected) {
     selectTab(teamTabs, selected);
     teamTabs.forEach(tab => {
       document.getElementById(tab.getAttribute('aria-controls')).hidden = tab !== selected;
     });
+  }
+
+  bindTabs(teamTabList, teamTabs, selected => {
+    if (selected.getAttribute('aria-selected') === 'true') return;
+    const hash = selected === leaderTab ? '#mentor' : '#' + selected.getAttribute('aria-controls');
+    history.pushState(null, '', hash);
+    showPage();
   });
 
   const paperTabList = document.querySelector('.paper-tabs');
@@ -334,7 +352,7 @@
   });
   bindTabs(paperTabList, paperTabs, activatePaperTab);
   activatePaperTab(paperTabs.find(tab => tab.getAttribute('aria-selected') === 'true'));
-  showPage(pages.has(window.location.hash));
+  showPage(pages.has(window.location.hash) || teamTabsByHash.has(window.location.hash));
 
   const exchange = document.getElementById('exchange-dialog');
   const exchangeBody = document.getElementById('exchange-dialog-body');
