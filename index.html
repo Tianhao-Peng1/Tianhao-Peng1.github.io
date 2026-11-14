@@ -36,9 +36,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "name": "ADMIRE Research Group", "alternateName": ["ADMIRE", "Adaptive Distributed Multi-agent Intelligence via Recursive Evolution", "ADMIRE 课题组"], "url": "https://tianhao-peng1.github.io/", "logo": "https://tianhao-peng1.github.io/assets/icons/admire-mark-180.png", "description": "The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Beihang University", "alternateName": "北京航空航天大学", "url": "https://ev.buaa.edu.cn/"}}</script>
 
-  <link rel="stylesheet" href="assets/site.css?v=20261115-profile">
+  <link rel="stylesheet" href="assets/site.css?v=20261115-navigation">
   <script src="assets/i18n/catalog.js?v=20261115-profile" defer></script>
-  <script src="assets/site.js?v=20261115-profile" defer></script>
+  <script src="assets/site.js?v=20261115-navigation" defer></script>
   <script src="assets/i18n.js?v=20261114-roster" defer></script>
   <script src="assets/project-demos.js?v=20261113-figures" defer></script>
 </head>
@@ -49,7 +49,7 @@
     <header class="site-header">
       <div class="site-topbar">
         <a class="site-university-mobile" href="https://ev.buaa.edu.cn/">
-          <img src="assets/images/beihang-university-logo.png" alt="北京航空航天大学" width="305" height="62">
+          <img src="assets/images/beihang-university-logo-hd.png" alt="北京航空航天大学" width="756" height="160">
         </a>
         <div class="language-picker" data-i18n-skip>
           <button class="language-toggle" id="language-toggle" type="button" aria-label="Language: English" title="Language" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu">
@@ -71,7 +71,7 @@
       <div class="site-header-inner">
         <div class="site-identity">
           <a class="site-university" href="https://ev.buaa.edu.cn/">
-            <img src="assets/images/beihang-university-logo.png" alt="北京航空航天大学" width="305" height="62">
+            <img src="assets/images/beihang-university-logo-hd.png" alt="北京航空航天大学" width="756" height="160">
           </a>
           <a class="site-laboratory" href="#lab">复杂关键软件环境全国重点实验室</a>
           <a class="site-brand" href="#top" aria-label="ADMIRE 课题组">
@@ -86,14 +86,10 @@
       <nav class="site-nav" id="site-nav" aria-label="页面导航">
         <ul>
           <li><a href="#top">课题组动态</a></li>
-          <li><a href="#mentor">团队成员</a></li>
-          <li><a href="#directions">研究方向</a></li>
-          <li><a href="#papers">科研成果</a></li>
-          <li><a href="#open-source">开源与演示</a></li>
           <li><a href="#lab">课题组与依托平台</a></li>
+          <li><a href="#mentor">团队成员</a></li>
           <li><a href="#resources">科研条件</a></li>
-          <li><a href="#exchanges">学术交流</a></li>
-          <li><a href="#projects">承担项目</a></li>
+          <li><a href="#exchanges">国内外交流</a></li>
         </ul>
       </nav>
       <main id="content" tabindex="-1">
@@ -113,7 +109,7 @@
           <div class="home-highlights">
             <section aria-labelledby="home-news-title">
               <h2 id="home-news-title">课题组动态</h2>
-              <p class="home-news-links"><a href="#papers">科研成果</a><a href="#exchanges">更多交流</a></p>
+              <p class="home-news-links"><a href="#papers">科研成果</a></p>
               <div id="home-news-list" role="region" aria-labelledby="home-news-title">
                 <article class="home-news home-exchange">
                   <p class="home-news-date" lang="en" data-i18n-skip><time datetime="2026-08-15">August 15</time>–<time datetime="2026-08-21">21, 2026</time></p>
@@ -165,101 +161,167 @@
                 </button>
                 <figcaption>无人机导航与群体协同实验</figcaption>
               </figure>
-              <a href="#open-source">全部演示</a>
+              <a href="#experimental-platforms">全部演示</a>
             </section>
           </div>
         </div>
 
-        <section class="section" id="directions" aria-labelledby="directions-title">
-          <div class="container directions-frame">
-            <header class="section-head">
-              <h2 id="directions-title">课题组研究方向</h2>
-              <p class="lead">课题组以软件空间的 RSI 基座与治理为底座，贯通物理／具身空间和科学发现空间，形成面向复杂环境的自适应智能体群体关键技术与系统框架。</p>
-            </header>
+        <section class="section" id="lab" aria-labelledby="lab-title">
 
-            <div class="direction-list" role="group" aria-labelledby="directions-title" tabindex="0">
-              <article class="direction-card">
-                <h3><span>软件空间</span> <span class="direction-topic">群体智能体的基座与治理</span></h3>
-                <figure class="direction-figure">
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="多智能体服务组合架构">
-                    <img src="assets/images/architecture-service-composition.webp" data-localized-figure="architecture-service-composition" alt="多智能体服务组合架构" width="1074" height="380" loading="lazy" decoding="async">
-                  </button>
-                  <figcaption>多智能体服务组合架构</figcaption>
-                </figure>
-                <p class="direction-summary">以 Agentic Mesh 组织智能体协作，支持受控的递归自改进。</p>
-                <details class="direction-details">
-                  <summary>研究要点</summary>
-                  <div class="direction-body">
-                    <p class="direction-description">为软件、具身与科学发现空间中的智能体与服务提供统一的运行与治理基座（Agentic Mesh），并以隔离实验、独立评测和渐进发布实现受控的递归自改进（RSI）。</p>
-                    <ul class="direction-points">
-                      <li>Agentic Mesh 治理：运行时、生命周期、网关、遥测、记忆与编排，统一接入群体 Agent 与 Service。</li>
-                      <li>受控自改进：在隔离沙箱中生成并评测候选版本，先过约束、再独立复评，渐进发布且可回退。</li>
-                      <li>领域智能体：服务组合、微服务根因定位与智能运维，作为基座上的典型应用持续演化。</li>
-                    </ul>
-                    <div class="direction-tags">
-                      <span class="tag">Agentic Mesh</span>
-                      <span class="tag">RSI 基座</span>
-                      <span class="tag">RCA Agents</span>
-                    </div>
-                  </div>
-                </details>
-              </article>
+          <div class="container">
 
-              <article class="direction-card">
-                <h3><span>物理空间</span> <span class="direction-topic">具身群体智能</span></h3>
-                <figure class="direction-figure">
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="多智能体协同控制实验平台">
-                    <img src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
-                  </button>
-                  <figcaption>多智能体协同控制实验平台</figcaption>
-                </figure>
-                <p class="direction-summary">研究无人机和机器人的协同控制、路径规划与实物验证。</p>
-                <details class="direction-details">
-                  <summary>研究要点</summary>
-                  <div class="direction-body">
-                    <p class="direction-description">面向无人机、机器人和无人系统，把大模型的高层认知与多智能体强化学习、物理先验、安全约束和真实环境反馈结合起来。</p>
-                    <ul class="direction-points">
-                      <li>从稳定控制、团队共识到路径规划与空间推理，支撑可部署的多机器人协作。</li>
-                      <li>利用对称性、势场、Lyapunov 稳定性等数学物理先验提升训练效率与安全性。</li>
-                      <li>用 LLM 智能体自动生成奖励、组织训练、封装模型并推动仿真到真实迁移。</li>
-                    </ul>
-                    <div class="direction-tags">
-                      <span class="tag">UAV Swarm</span>
-                      <span class="tag">MARL</span>
-                      <span class="tag">Sim-to-Real</span>
-                    </div>
-                  </div>
-                </details>
-              </article>
+            <div class="section-head">
 
-              <article class="direction-card">
-                <h3><span>科学发现空间</span> <span class="direction-topic" lang="en" translate="no" data-i18n-skip>Agentic Scientist</span></h3>
-                <figure class="direction-figure">
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="RGP 符号回归框架" data-src="assets/images/paper-rgp.webp">
-                    <img src="assets/images/paper-rgp-preview.webp" data-localized-figure="paper-rgp" data-figure-original-language="en" alt="符号回归中的子表达式复用与遗传编程流程" width="720" height="343" loading="lazy" decoding="async">
-                  </button>
-                  <figcaption>RGP 符号回归框架</figcaption>
-                </figure>
-                <p class="direction-summary">让理论、计算与实验智能体协作，支持科研自动化。</p>
-                <details class="direction-details">
-                  <summary>研究要点</summary>
-                  <div class="direction-body">
-                    <p class="direction-description">把科学问题转化为可验证的智能体工作流，让理论、计算、实验和反馈形成闭环，支撑科学计算、AI4Sci 与实验自动化。</p>
-                    <ul class="direction-points">
-                      <li>Scientific Theory、Computing、Experiment Agents 分工协作，完成文献、假设、仿真和实验设计。</li>
-                      <li>面向 PDE 求解、流体仿真等任务，构建检索、计划、代码生成、执行与纠错闭环。</li>
-                      <li>结合 ScienceOS、智能计算平台和机械臂/多模态实验设备，探索可复现的科研自动化。</li>
-                    </ul>
-                    <div class="direction-tags">
-                      <span class="tag">ScienceOS</span>
-                      <span class="tag">AI4Sci</span>
-                      <span class="tag">PDE Agents</span>
-                    </div>
-                  </div>
-                </details>
-              </article>
+              <div>
+
+                <h2 id="lab-title">课题组与依托平台</h2>
+
+              </div>
+
+              <p class="lead">ADMIRE 课题组依托北京航空航天大学复杂关键软件环境全国重点实验室开展研究。</p>
+
             </div>
+
+            <section class="lab-research" id="directions" aria-labelledby="directions-title" data-section-anchor tabindex="-1">
+              <div class="container directions-frame">
+                <header class="section-head">
+                  <h3 id="directions-title">课题组研究方向</h3>
+                  <p class="lead">课题组以软件空间的 RSI 基座与治理为底座，贯通物理／具身空间和科学发现空间，形成面向复杂环境的自适应智能体群体关键技术与系统框架。</p>
+                </header>
+
+                <div class="direction-list" role="group" aria-labelledby="directions-title" tabindex="0">
+                  <article class="direction-card">
+                    <h4><span>软件空间</span> <span class="direction-topic">群体智能体的基座与治理</span></h4>
+                    <figure class="direction-figure">
+                      <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="多智能体服务组合架构">
+                        <img src="assets/images/architecture-service-composition.webp" data-localized-figure="architecture-service-composition" alt="多智能体服务组合架构" width="1074" height="380" loading="lazy" decoding="async">
+                      </button>
+                      <figcaption>多智能体服务组合架构</figcaption>
+                    </figure>
+                    <p class="direction-summary">以 Agentic Mesh 组织智能体协作，支持受控的递归自改进。</p>
+                    <details class="direction-details">
+                      <summary>研究要点</summary>
+                      <div class="direction-body">
+                        <p class="direction-description">为软件、具身与科学发现空间中的智能体与服务提供统一的运行与治理基座（Agentic Mesh），并以隔离实验、独立评测和渐进发布实现受控的递归自改进（RSI）。</p>
+                        <ul class="direction-points">
+                          <li>Agentic Mesh 治理：运行时、生命周期、网关、遥测、记忆与编排，统一接入群体 Agent 与 Service。</li>
+                          <li>受控自改进：在隔离沙箱中生成并评测候选版本，先过约束、再独立复评，渐进发布且可回退。</li>
+                          <li>领域智能体：服务组合、微服务根因定位与智能运维，作为基座上的典型应用持续演化。</li>
+                        </ul>
+                        <div class="direction-tags">
+                          <span class="tag">Agentic Mesh</span>
+                          <span class="tag">RSI 基座</span>
+                          <span class="tag">RCA Agents</span>
+                        </div>
+                      </div>
+                    </details>
+                  </article>
+
+                  <article class="direction-card">
+                    <h4><span>物理空间</span> <span class="direction-topic">具身群体智能</span></h4>
+                    <figure class="direction-figure">
+                      <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="多智能体协同控制实验平台">
+                        <img src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
+                      </button>
+                      <figcaption>多智能体协同控制实验平台</figcaption>
+                    </figure>
+                    <p class="direction-summary">研究无人机和机器人的协同控制、路径规划与实物验证。</p>
+                    <details class="direction-details">
+                      <summary>研究要点</summary>
+                      <div class="direction-body">
+                        <p class="direction-description">面向无人机、机器人和无人系统，把大模型的高层认知与多智能体强化学习、物理先验、安全约束和真实环境反馈结合起来。</p>
+                        <ul class="direction-points">
+                          <li>从稳定控制、团队共识到路径规划与空间推理，支撑可部署的多机器人协作。</li>
+                          <li>利用对称性、势场、Lyapunov 稳定性等数学物理先验提升训练效率与安全性。</li>
+                          <li>用 LLM 智能体自动生成奖励、组织训练、封装模型并推动仿真到真实迁移。</li>
+                        </ul>
+                        <div class="direction-tags">
+                          <span class="tag">UAV Swarm</span>
+                          <span class="tag">MARL</span>
+                          <span class="tag">Sim-to-Real</span>
+                        </div>
+                      </div>
+                    </details>
+                  </article>
+
+                  <article class="direction-card">
+                    <h4><span>科学发现空间</span> <span class="direction-topic" lang="en" translate="no" data-i18n-skip>Agentic Scientist</span></h4>
+                    <figure class="direction-figure">
+                      <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="RGP 符号回归框架" data-src="assets/images/paper-rgp.webp">
+                        <img src="assets/images/paper-rgp-preview.webp" data-localized-figure="paper-rgp" data-figure-original-language="en" alt="符号回归中的子表达式复用与遗传编程流程" width="720" height="343" loading="lazy" decoding="async">
+                      </button>
+                      <figcaption>RGP 符号回归框架</figcaption>
+                    </figure>
+                    <p class="direction-summary">让理论、计算与实验智能体协作，支持科研自动化。</p>
+                    <details class="direction-details">
+                      <summary>研究要点</summary>
+                      <div class="direction-body">
+                        <p class="direction-description">把科学问题转化为可验证的智能体工作流，让理论、计算、实验和反馈形成闭环，支撑科学计算、AI4Sci 与实验自动化。</p>
+                        <ul class="direction-points">
+                          <li>Scientific Theory、Computing、Experiment Agents 分工协作，完成文献、假设、仿真和实验设计。</li>
+                          <li>面向 PDE 求解、流体仿真等任务，构建检索、计划、代码生成、执行与纠错闭环。</li>
+                          <li>结合 ScienceOS、智能计算平台和机械臂/多模态实验设备，探索可复现的科研自动化。</li>
+                        </ul>
+                        <div class="direction-tags">
+                          <span class="tag">ScienceOS</span>
+                          <span class="tag">AI4Sci</span>
+                          <span class="tag">PDE Agents</span>
+                        </div>
+                      </div>
+                    </details>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <div class="profile-block" aria-labelledby="profile-platform-title">
+
+              <div>
+
+                <h3 class="profile-platform-name" id="profile-platform-title">复杂关键软件环境全国重点实验室</h3>
+
+              </div>
+
+              <div class="profile-copy">
+
+                <p>实验室面向国家重大需求，以支撑大型复杂装备和空天地实时系统的复杂关键软件为研究对象，围绕开发效率、质量保障与持续演化等关键问题开展研究。</p>
+
+                <p>重点研究方向包括：复杂系统机理及软件理论、群体智能与群体软件工程、软件可信保障与质量评估、软件运行支撑与持续演化。</p>
+
+              </div>
+
+              <div class="platform-gallery" aria-label="全国重点实验室研究对象与重点任务">
+
+                <figure class="platform-figure">
+
+                  <button class="image-open platform-visual" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="复杂关键软件环境全国重点实验室 · 研究对象" data-description="全国重点实验室以支撑大型复杂装备和空天地实时系统的复杂关键软件为研究对象。图示摘自实验室介绍材料。" aria-label="放大查看全国重点实验室研究对象图">
+
+                    <img src="assets/images/platform-research-object.webp" data-localized-figure="platform-research-object" data-figure-original-language="zh" alt="复杂关键软件支撑大型复杂装备和空天地实时系统，涵盖资源接入、实时调度、接口定义、功能实现、安全关键与可信保障" width="1600" height="900" loading="lazy" decoding="async">
+
+                  </button>
+
+                  <figcaption><span class="caption-kicker">全国重点实验室 · 研究对象</span><h4>支撑复杂系统的关键软件</h4><p>复杂关键软件是大型复杂装备与空天地实时系统的运行中枢和基础设施，连接资源、功能与安全可信保障。</p></figcaption>
+
+                </figure>
+
+                <figure class="platform-figure">
+
+                  <button class="image-open platform-visual" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="复杂关键软件环境全国重点实验室 · 重点任务" data-description="全国重点实验室围绕国家重大需求，建设开发运行一体化软件基础环境，关注开发效率、质量保障与持续演化。图示摘自实验室介绍材料。" aria-label="放大查看全国重点实验室重点任务图">
+
+                    <img src="assets/images/platform-key-tasks.webp" data-localized-figure="platform-key-tasks" data-figure-original-language="zh" alt="全国重点实验室重点任务涵盖大型复杂装备、空天地实时系统和开发运行一体化软件基础环境，围绕四个研究方向解决三类关键问题" width="1600" height="900" loading="lazy" decoding="async">
+
+                  </button>
+
+                  <figcaption><span class="caption-kicker">全国重点实验室 · 重点任务</span><h4>开发运行一体化的软件基础环境</h4><p>围绕开发效率、质量保障与持续演化，贯通建模理解、构造开发、质量保障和运行演化，支撑复杂关键软件全生命周期。</p></figcaption>
+
+                </figure>
+
+              </div>
+
+            </div>
+
           </div>
+
         </section>
 
         <section class="section" id="mentor">
@@ -583,130 +645,6 @@
                 </figure>
               </div>
             </section>
-          </div>
-
-        </section>
-
-        <section class="section" id="lab">
-
-          <div class="container">
-
-            <div class="section-head">
-
-              <div>
-
-                <h2>课题组与依托平台</h2>
-
-              </div>
-
-              <p class="lead">ADMIRE 课题组依托北京航空航天大学复杂关键软件环境全国重点实验室开展研究。</p>
-
-            </div>
-
-            <div class="profile-block" aria-labelledby="profile-platform-title">
-
-              <div>
-
-                <h3 class="profile-platform-name" id="profile-platform-title">复杂关键软件环境全国重点实验室</h3>
-
-              </div>
-
-              <div class="profile-copy">
-
-                <p>实验室面向国家重大需求，以支撑大型复杂装备和空天地实时系统的复杂关键软件为研究对象，围绕开发效率、质量保障与持续演化等关键问题开展研究。</p>
-
-                <p>重点研究方向包括：复杂系统机理及软件理论、群体智能与群体软件工程、软件可信保障与质量评估、软件运行支撑与持续演化。</p>
-
-              </div>
-
-              <div class="platform-gallery" aria-label="全国重点实验室研究对象与重点任务">
-
-                <figure class="platform-figure">
-
-                  <button class="image-open platform-visual" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="复杂关键软件环境全国重点实验室 · 研究对象" data-description="全国重点实验室以支撑大型复杂装备和空天地实时系统的复杂关键软件为研究对象。图示摘自实验室介绍材料。" aria-label="放大查看全国重点实验室研究对象图">
-
-                    <img src="assets/images/platform-research-object.webp" data-localized-figure="platform-research-object" data-figure-original-language="zh" alt="复杂关键软件支撑大型复杂装备和空天地实时系统，涵盖资源接入、实时调度、接口定义、功能实现、安全关键与可信保障" width="1600" height="900" loading="lazy" decoding="async">
-
-                  </button>
-
-                  <figcaption><span class="caption-kicker">全国重点实验室 · 研究对象</span><h4>支撑复杂系统的关键软件</h4><p>复杂关键软件是大型复杂装备与空天地实时系统的运行中枢和基础设施，连接资源、功能与安全可信保障。</p></figcaption>
-
-                </figure>
-
-                <figure class="platform-figure">
-
-                  <button class="image-open platform-visual" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="复杂关键软件环境全国重点实验室 · 重点任务" data-description="全国重点实验室围绕国家重大需求，建设开发运行一体化软件基础环境，关注开发效率、质量保障与持续演化。图示摘自实验室介绍材料。" aria-label="放大查看全国重点实验室重点任务图">
-
-                    <img src="assets/images/platform-key-tasks.webp" data-localized-figure="platform-key-tasks" data-figure-original-language="zh" alt="全国重点实验室重点任务涵盖大型复杂装备、空天地实时系统和开发运行一体化软件基础环境，围绕四个研究方向解决三类关键问题" width="1600" height="900" loading="lazy" decoding="async">
-
-                  </button>
-
-                  <figcaption><span class="caption-kicker">全国重点实验室 · 重点任务</span><h4>开发运行一体化的软件基础环境</h4><p>围绕开发效率、质量保障与持续演化，贯通建模理解、构造开发、质量保障和运行演化，支撑复杂关键软件全生命周期。</p></figcaption>
-
-                </figure>
-
-              </div>
-
-            </div>
-
-            <div class="profile-block" aria-labelledby="profile-group-title">
-
-              <div>
-
-                <h3 id="profile-group-title">从 Software Agents 到 Agentic Scientist</h3>
-
-              </div>
-
-              <div class="profile-copy">
-
-                <p>在这一研究背景下，ADMIRE 课题组聚焦复杂环境中的自适应智能体群体，沿软件空间、物理／具身空间和科学发现空间三条主线展开研究。</p>
-
-                <p>课题组探索智能体的学习、推理、协作与持续演化机制，形成面向软件系统、无人系统和科学发现的关键技术与系统框架。</p>
-
-                <div class="research-tags">
-
-                  <span class="tag">MAPE-K 闭环</span>
-
-                  <span class="tag">Agentic Mesh</span>
-
-                  <span class="tag">UAV 群体智能</span>
-
-                  <span class="tag">ScienceOS / AI4Sci</span>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="profile-stats" role="group" aria-label="科研条件与项目基础">
-
-              <div class="stat">
-
-                <div class="stat-num num">200<span class="stat-unit">㎡</span></div>
-
-                <p class="stat-label">高标准室内试验场地，集成高精度光学动捕系统</p>
-
-              </div>
-
-              <div class="stat">
-
-                <div class="stat-num num">100<span class="stat-unit">PFLOPS+</span></div>
-
-                <p class="stat-label">GPU 集群服务器算力，支撑高强度仿真与训练</p>
-
-              </div>
-
-              <div class="stat">
-
-                <div class="stat-num num">30<span class="stat-unit">+</span></div>
-
-                <p class="stat-label">国家重点研发计划、国家自然基金重点等课题基础</p>
-
-              </div>
-
-            </div>
-
           </div>
 
         </section>
@@ -3586,111 +3524,14 @@
 
         </section>
 
-        <section class="section" id="open-source" aria-labelledby="open-source-title">
-          <div class="container">
-            <div class="section-head">
-              <div><h2 id="open-source-title">开源项目与演示</h2></div>
-              <p class="lead">面向无人机导航与群体协同，开放研究代码、评测基准与实验演示。</p>
-            </div>
-            <div class="open-project-grid">
-              <article class="open-project" aria-labelledby="voln-title">
-                <button class="image-open open-project-visual" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="VoLN-UAV · 纯视觉长程导航" data-description="VoLN-UAV 官方项目图：对比语言指令导航与依赖目标视图、场景视觉线索的导航任务。" aria-label="查看 VoLN-UAV 项目介绍图">
-                  <img src="assets/open-source/voln-overview.webp" data-localized-figure="voln-overview" data-figure-original-language="en" alt="VoLN-UAV 视觉导航任务与传统语言指令导航的对比" width="1400" height="860" loading="lazy" decoding="async">
-                </button>
-                <div class="open-project-copy">
-                  <p class="open-project-meta">纯视觉导航 · 多模态模型 · MIT</p>
-                  <h3 id="voln-title">VoLN-UAV</h3>
-                  <p>以目标视图和场景视觉线索驱动无人机长程导航，提供模型训练、闭环评测代码，以及数据集和仿真环境入口。</p>
-                  <p class="open-project-evidence">基准共 7,210 个导航片段（首批公开 1,786 个、覆盖 4 个环境）· AirSim 闭环评测 NE / SR / OSR / nDTW / SPL · 未见场景测试集成功率 7.4% / 4.5% / 1.8%（易 / 中 / 难）</p>
-                  <div class="open-project-links">
-                    <a href="https://github.com/Admire-ljb/VoLN-UAV" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github.svg" alt="" width="20" height="20">GitHub<img src="assets/icons/external-link.svg" alt="" width="16" height="16"></a>
-                    <a href="https://admire-ljb.github.io/VoLN-UAV/" target="_blank" rel="noopener noreferrer">项目主页<img src="assets/icons/external-link.svg" alt="" width="16" height="16"></a>
-                    <a href="https://arxiv.org/abs/2607.21400" target="_blank" rel="noopener noreferrer">论文<img src="assets/icons/external-link.svg" alt="" width="16" height="16"></a>
-                  </div>
-                </div>
-              </article>
-              <article class="open-project" aria-labelledby="aeroweaver-title">
-                <button class="image-open open-project-visual" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="AeroWeaver · 多无人机协同控制台" data-description="AeroWeaver 官方控制台截图：展示无人机状态、任务输入与执行日志。" aria-label="查看 AeroWeaver 控制台截图">
-                  <img src="assets/open-source/aeroweaver-console.webp" data-localized-figure="aeroweaver-console" data-figure-original-language="en" alt="AeroWeaver 多无人机协同系统的状态观测与任务编排控制台" width="1280" height="720" loading="lazy" decoding="async">
-                </button>
-                <div class="open-project-copy">
-                  <p class="open-project-meta">多机协同 · 大模型任务编排 · MIT</p>
-                  <h3 id="aeroweaver-title">AeroWeaver</h3>
-                  <p>整合无人机状态观测、技能调度、编队控制与自然语言任务规划，支持人工操作和大模型驱动两种模式，以及 AirSim、PX4/Gazebo 等仿真适配。</p>
-                  <p class="open-project-evidence">论文 arXiv 2609.18520 · 适配 Mock、AirSim、PX4/Gazebo · 技能落地、分布式执行与经验复用</p>
-                  <div class="open-project-links">
-                    <a href="https://github.com/Admire-ljb/AeroWeaver" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github.svg" alt="" width="20" height="20">GitHub<img src="assets/icons/external-link.svg" alt="" width="16" height="16"></a><a href="https://arxiv.org/abs/2609.18520" target="_blank" rel="noopener noreferrer">论文<img src="assets/icons/external-link.svg" alt="" width="16" height="16"></a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="demo-heading" id="experimental-platforms"><h3>实验平台</h3><span>虚实融合、群体协同、机器人操作与外场实景</span></div>
-            <div class="demo-grid">
-              <article class="demo-card platform-card" data-platform="hybrid">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/air-ground-hybrid.mp4" data-demo-title="空地协同虚实融合验证平台" data-demo-description="融合三维仿真、集群状态可视化与室内实物场景，展示空地协同任务的虚实结合验证过程。" aria-label="播放空地协同虚实融合验证平台视频，3 分 53 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                  <img class="demo-poster" src="assets/platforms/air-ground-hybrid-clean.webp" alt="空地协同任务的三维仿真界面与室内实物场景" width="960" height="540" loading="lazy" decoding="async">
-                  <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">03:53</span>
-                </button>
-                <h4>空地协同虚实融合验证平台</h4><p>目标搜索、协同打击、空地护送三阶段任务，仿真集群与实物集群同步验证</p>
-              </article>
-              <article class="demo-card platform-card" data-platform="control">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                  <img class="demo-poster" src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
-                  <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">01:43</span>
-                </button>
-                <h4>多智能体协同控制实验平台</h4><p>多智能体仿真与室内无人机编队协同实验</p>
-              </article>
-              <article class="demo-card platform-card" data-platform="urban-sandbox">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/urban-sandbox-air-ground.mp4" data-demo-title="城市沙盘空地协同实验平台" data-demo-description="在包含道路、建筑与山地模型的室内城市沙盘中，展示无人机飞行与地面车辆运行，为空地协同任务提供实物实验环境。" aria-label="播放城市沙盘空地协同实验平台视频，2 分 2 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                  <img class="demo-poster" src="assets/platforms/urban-sandbox-air-ground.webp" alt="室内城市沙盘中的无人机、地面车辆与道路建筑模型" width="480" height="272" loading="lazy" decoding="async">
-                  <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:02</span>
-                </button>
-                <h4>城市沙盘空地协同实验平台</h4><p>城市道路与建筑沙盘中的无人机、地面车辆实验</p>
-              </article>
-              <article class="demo-card platform-card" data-platform="robotics">
-                <button class="demo-trigger" type="button" data-demo-group="robotics" data-demo-title="具身智能与机器人实验平台" aria-label="查看具身智能与机器人实验平台，4 段实验视频" aria-haspopup="dialog" aria-controls="demo-dialog">
-                  <img class="demo-poster" src="assets/platforms/dual-arm-manipulation.webp" alt="双臂机器人在桌面场景中抓取和放置物体" width="960" height="540" loading="lazy" decoding="async">
-                  <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">4 段演示</span>
-                </button>
-                <h4>具身智能与机器人实验平台</h4><p>双臂操作、协同导航、自主探索与四足运动控制</p>
-              </article>
-              <article class="demo-card platform-card" data-platform="field">
-                <button class="platform-cover image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机集群部署" data-description="外场试验中准备就位的无人机集群。" aria-label="查看外场试验无人机集群部署照片">
-                  <img class="demo-poster" src="assets/platforms/field-uav-deployment-clean.webp" alt="外场试验场地上排列就位的无人机集群" width="640" height="360" loading="lazy" decoding="async"><span class="demo-duration">4 张实景</span>
-                </button>
-                <h4>空地异构集群外场试验平台</h4><p>无人机集群部署、无人车实物与机群返场</p>
-                <div class="platform-stills" aria-label="外场试验实物照片">
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机地面阵列" data-description="地面视角下的无人机阵列与外场试验环境。" aria-label="查看无人机地面阵列照片" title="无人机地面阵列"><img src="assets/platforms/field-uav-lineup-clean.webp" alt="地面视角下的无人机阵列" width="640" height="360" loading="lazy" decoding="async"></button>
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人车协同试验" data-description="外场试验中参与协同任务的地面无人车。" aria-label="查看无人车协同试验照片" title="无人车协同试验"><img src="assets/platforms/field-ground-vehicles-clean.webp" alt="外场试验中的多台地面无人车" width="640" height="360" loading="lazy" decoding="async"></button>
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 机群降落返场" data-description="试验结束后无人机集群降落、返回地面场地的画面。" aria-label="查看机群降落返场照片" title="机群降落返场"><img src="assets/platforms/field-uav-return-clean.webp" alt="无人机集群降落返场" width="640" height="360" loading="lazy" decoding="async"></button>
-                </div>
-              </article>
-              <article class="demo-card">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                  <img class="demo-poster" src="assets/open-source/uav-navigation-swarm-clean.webp" alt="无人机在室内沙盘场地进行飞行实验" width="960" height="540" loading="lazy" decoding="async">
-                  <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:05</span>
-                </button>
-                <h4>无人机导航与群体协同实验</h4><p>AERIS 语言模型编排的多机协同：视觉语言导航与室内多机实飞</p>
-              </article>
-              <article class="demo-card">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/voln-sim-real.mp4" data-demo-title="VoLN-UAV · 仿真与实飞" data-demo-description="VoLN-UAV 官方演示：先为仿真环境中的第一视角长程导航，再为室内城市沙盘实飞。未见场景测试集成功率 7.4% / 4.5% / 1.8%（易 / 中 / 难），约为最强基线的 3 倍，长程导航仍有较大挑战。" aria-label="播放 VoLN-UAV 仿真与实飞演示，14 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                  <img class="demo-poster" src="assets/open-source/voln-sim-real.webp" alt="VoLN-UAV 在室内城市沙盘中的实飞画面" width="960" height="540" loading="lazy" decoding="async">
-                  <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">00:14</span>
-                </button>
-                <h4>VoLN-UAV · 仿真与实飞</h4><p>纯视觉长程导航：仿真第一视角 + 室内沙盘实飞，<a href="https://admire-ljb.github.io/VoLN-UAV/#demo" target="_blank" rel="noopener noreferrer">项目主页</a></p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="resources">
+        <section class="section" id="resources" aria-labelledby="facilities-title">
           <div class="container">
 
             <div class="resource-layout">
 
               <div>
 
-                <h2>科研条件与平台支撑</h2>
+                <h2 id="facilities-title">科研条件</h2>
 
                 <p class="lead">课题组依托全国重点实验室开展研究，科研工作由算力集群、室内试验场地与无人系统等条件支撑，覆盖软件智能体、具身群体智能和科学计算，并与国内外高水平团队保持长期科研合作。</p>
 
@@ -3714,79 +3555,64 @@
 
             </div>
 
-            <article class="collaboration-panel" aria-label="国内外合作">
-
-              <div class="collaboration-head">
-
-                <div>
-
-                  <h3>国内外合作</h3>
-
-                </div>
-
-                <p>课题组与新加坡国立大学、南洋理工大学及意大利米兰理工大学保持长期国际合作，并与上海人工智能实验室、中关村实验室、乾元实验室和启元实验室四家国家实验室开展联合研究，持续推进科研协作与博士生联合培养。</p>
+            <section aria-labelledby="experimental-platforms">
+              <div class="demo-heading"><h3 id="experimental-platforms" tabindex="-1" data-section-anchor>实验平台</h3><span>虚实融合、群体协同、机器人操作与外场实景</span></div>
+              <div class="demo-grid">
+                <article class="demo-card platform-card" data-platform="hybrid">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/air-ground-hybrid.mp4" data-demo-title="空地协同虚实融合验证平台" data-demo-description="融合三维仿真、集群状态可视化与室内实物场景，展示空地协同任务的虚实结合验证过程。" aria-label="播放空地协同虚实融合验证平台视频，3 分 53 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/air-ground-hybrid-clean.webp" alt="空地协同任务的三维仿真界面与室内实物场景" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">03:53</span>
+                  </button>
+                  <h4>空地协同虚实融合验证平台</h4><p>目标搜索、协同打击、空地护送三阶段任务，仿真集群与实物集群同步验证</p>
+                </article>
+                <article class="demo-card platform-card" data-platform="control">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">01:43</span>
+                  </button>
+                  <h4>多智能体协同控制实验平台</h4><p>多智能体仿真与室内无人机编队协同实验</p>
+                </article>
+                <article class="demo-card platform-card" data-platform="urban-sandbox">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/urban-sandbox-air-ground.mp4" data-demo-title="城市沙盘空地协同实验平台" data-demo-description="在包含道路、建筑与山地模型的室内城市沙盘中，展示无人机飞行与地面车辆运行，为空地协同任务提供实物实验环境。" aria-label="播放城市沙盘空地协同实验平台视频，2 分 2 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/urban-sandbox-air-ground.webp" alt="室内城市沙盘中的无人机、地面车辆与道路建筑模型" width="480" height="272" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:02</span>
+                  </button>
+                  <h4>城市沙盘空地协同实验平台</h4><p>城市道路与建筑沙盘中的无人机、地面车辆实验</p>
+                </article>
+                <article class="demo-card platform-card" data-platform="robotics">
+                  <button class="demo-trigger" type="button" data-demo-group="robotics" data-demo-title="具身智能与机器人实验平台" aria-label="查看具身智能与机器人实验平台，4 段实验视频" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/dual-arm-manipulation.webp" alt="双臂机器人在桌面场景中抓取和放置物体" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">4 段演示</span>
+                  </button>
+                  <h4>具身智能与机器人实验平台</h4><p>双臂操作、协同导航、自主探索与四足运动控制</p>
+                </article>
+                <article class="demo-card platform-card" data-platform="field">
+                  <button class="platform-cover image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机集群部署" data-description="外场试验中准备就位的无人机集群。" aria-label="查看外场试验无人机集群部署照片">
+                    <img class="demo-poster" src="assets/platforms/field-uav-deployment-clean.webp" alt="外场试验场地上排列就位的无人机集群" width="640" height="360" loading="lazy" decoding="async"><span class="demo-duration">4 张实景</span>
+                  </button>
+                  <h4>空地异构集群外场试验平台</h4><p>无人机集群部署、无人车实物与机群返场</p>
+                  <div class="platform-stills" aria-label="外场试验实物照片">
+                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机地面阵列" data-description="地面视角下的无人机阵列与外场试验环境。" aria-label="查看无人机地面阵列照片" title="无人机地面阵列"><img src="assets/platforms/field-uav-lineup-clean.webp" alt="地面视角下的无人机阵列" width="640" height="360" loading="lazy" decoding="async"></button>
+                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人车协同试验" data-description="外场试验中参与协同任务的地面无人车。" aria-label="查看无人车协同试验照片" title="无人车协同试验"><img src="assets/platforms/field-ground-vehicles-clean.webp" alt="外场试验中的多台地面无人车" width="640" height="360" loading="lazy" decoding="async"></button>
+                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 机群降落返场" data-description="试验结束后无人机集群降落、返回地面场地的画面。" aria-label="查看机群降落返场照片" title="机群降落返场"><img src="assets/platforms/field-uav-return-clean.webp" alt="无人机集群降落返场" width="640" height="360" loading="lazy" decoding="async"></button>
+                  </div>
+                </article>
+                <article class="demo-card">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/open-source/uav-navigation-swarm-clean.webp" alt="无人机在室内沙盘场地进行飞行实验" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:05</span>
+                  </button>
+                  <h4>无人机导航与群体协同实验</h4><p>AERIS 语言模型编排的多机协同：视觉语言导航与室内多机实飞</p>
+                </article>
+                <article class="demo-card">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/voln-sim-real.mp4" data-demo-title="VoLN-UAV · 仿真与实飞" data-demo-description="VoLN-UAV 官方演示：先为仿真环境中的第一视角长程导航，再为室内城市沙盘实飞。未见场景测试集成功率 7.4% / 4.5% / 1.8%（易 / 中 / 难），约为最强基线的 3 倍，长程导航仍有较大挑战。" aria-label="播放 VoLN-UAV 仿真与实飞演示，14 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/open-source/voln-sim-real.webp" alt="VoLN-UAV 在室内城市沙盘中的实飞画面" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">00:14</span>
+                  </button>
+                  <h4>VoLN-UAV · 仿真与实飞</h4><p>纯视觉长程导航：仿真第一视角 + 室内沙盘实飞，<a href="https://admire-ljb.github.io/VoLN-UAV/#demo" target="_blank" rel="noopener noreferrer">项目主页</a></p>
+                </article>
               </div>
-
-              <div class="collaboration-grid">
-
-                <section class="partner-card" aria-label="新加坡国立大学 · 南洋理工大学">
-                  <button class="image-open partner-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="组内学生在新加坡南洋理工大学交流" data-description="组内学生在新加坡南洋理工大学进行学术访问与合作交流。"><img class="partner-photo" src="assets/images/ntu-exchange.webp" alt="组内学生在新加坡南洋理工大学交流合影" decoding="async" loading="lazy"></button>
-
-                  <div>
-
-                    <h4>新加坡国立大学 · 南洋理工大学</h4>
-                    <p>围绕智能体、多机器人协作、群体智能与大模型等方向保持合作交流，组内多位学生曾赴新加坡开展学术访问与合作研究。</p>
-                  </div>
-
-                  <span class="partner-meta">Singapore</span>
-
-                </section>
-
-                <section class="partner-card" aria-label="国家实验室合作">
-
-                  <div class="partner-logo-stack" aria-hidden="true">
-                    <div class="partner-logo partner-logo--shlab"><img src="assets/images/logo-shlab-trimmed.webp" alt="" width="720" height="78" loading="lazy" decoding="async"></div>
-                    <div class="partner-logo partner-logo--zgclab"><img src="assets/images/logo-zgclab.png" alt="" width="477" height="151" loading="lazy" decoding="async"></div>
-                    <div class="partner-logo partner-logo--qiyuan"><img src="assets/images/logo-qiyuan.png" alt="" width="3854" height="674" loading="lazy" decoding="async"></div>
-                  </div>
-                  <div>
-
-                    <h4>国家实验室合作</h4>
-
-                    <p>与上海人工智能实验室、中关村实验室、乾元实验室和启元实验室四家国家实验室保持长期合作，围绕软件智能体、大模型安全、具身智能与复杂智能系统开展联合研究，并推进博士生联合培养。</p>
-                    <ul class="partner-paper-list" aria-label="国内合作代表成果">
-
-                      <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=I82u5mMAAAAJ&amp;citation_for_view=I82u5mMAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener">Learning to handle exceptions</a>（软件工程）</li>
-
-                      <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=I82u5mMAAAAJ&amp;citation_for_view=I82u5mMAAAAJ:Se3iqnhoufwC" target="_blank" rel="noopener">ELAKT: Enhancing Locality for Attentive Knowledge Tracing</a>（数据挖掘）</li>
-
-                    </ul>
-
-                  </div>
-
-                  <span class="partner-meta">China</span>
-
-                </section>
-
-                <section class="partner-card" aria-label="意大利米兰理工大学">
-
-                  <button class="image-open partner-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="组内博士博后在意大利米兰理工大学交流" data-description="组内博士、博后在意大利米兰理工大学开展学术交流合作。"><img class="partner-photo" src="assets/images/polimi-exchange.webp" alt="组内博士博后在意大利米兰理工大学交流合影" decoding="async" loading="lazy"></button>
-
-                  <div>
-
-                    <h4>意大利米兰理工大学</h4>
-
-                    <p>面向复杂系统、智能决策与交叉科学问题保持稳定合作交流，组内博士、博后曾赴该校开展合作研究。</p>
-
-                  </div>
-
-                  <span class="partner-meta">Italy</span>
-
-                </section>
-
-              </div>
-
-            </article>
+            </section>
 
           </div>
 
@@ -3893,6 +3719,80 @@
               </article>
 
             </div>
+
+            <article class="collaboration-panel" aria-label="国内外合作">
+
+              <div class="collaboration-head">
+
+                <div>
+
+                  <h3>国内外合作</h3>
+
+                </div>
+
+                <p>课题组与新加坡国立大学、南洋理工大学及意大利米兰理工大学保持长期国际合作，并与上海人工智能实验室、中关村实验室、乾元实验室和启元实验室四家国家实验室开展联合研究，持续推进科研协作与博士生联合培养。</p>
+              </div>
+
+              <div class="collaboration-grid">
+
+                <section class="partner-card" aria-label="新加坡国立大学 · 南洋理工大学">
+                  <button class="image-open partner-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="组内学生在新加坡南洋理工大学交流" data-description="组内学生在新加坡南洋理工大学进行学术访问与合作交流。"><img class="partner-photo" src="assets/images/ntu-exchange.webp" alt="组内学生在新加坡南洋理工大学交流合影" decoding="async" loading="lazy"></button>
+
+                  <div>
+
+                    <h4>新加坡国立大学 · 南洋理工大学</h4>
+                    <p>围绕智能体、多机器人协作、群体智能与大模型等方向保持合作交流，组内多位学生曾赴新加坡开展学术访问与合作研究。</p>
+                  </div>
+
+                  <span class="partner-meta">Singapore</span>
+
+                </section>
+
+                <section class="partner-card" aria-label="国家实验室合作">
+
+                  <div class="partner-logo-stack" aria-hidden="true">
+                    <div class="partner-logo partner-logo--shlab"><img src="assets/images/logo-shlab-trimmed.webp" alt="" width="720" height="78" loading="lazy" decoding="async"></div>
+                    <div class="partner-logo partner-logo--zgclab"><img src="assets/images/logo-zgclab.png" alt="" width="477" height="151" loading="lazy" decoding="async"></div>
+                    <div class="partner-logo partner-logo--qiyuan"><img src="assets/images/logo-qiyuan.png" alt="" width="3854" height="674" loading="lazy" decoding="async"></div>
+                  </div>
+                  <div>
+
+                    <h4>国家实验室合作</h4>
+
+                    <p>与上海人工智能实验室、中关村实验室、乾元实验室和启元实验室四家国家实验室保持长期合作，围绕软件智能体、大模型安全、具身智能与复杂智能系统开展联合研究，并推进博士生联合培养。</p>
+                    <ul class="partner-paper-list" aria-label="国内合作代表成果">
+
+                      <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=I82u5mMAAAAJ&amp;citation_for_view=I82u5mMAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener">Learning to handle exceptions</a>（软件工程）</li>
+
+                      <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=I82u5mMAAAAJ&amp;citation_for_view=I82u5mMAAAAJ:Se3iqnhoufwC" target="_blank" rel="noopener">ELAKT: Enhancing Locality for Attentive Knowledge Tracing</a>（数据挖掘）</li>
+
+                    </ul>
+
+                  </div>
+
+                  <span class="partner-meta">China</span>
+
+                </section>
+
+                <section class="partner-card" aria-label="意大利米兰理工大学">
+
+                  <button class="image-open partner-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="组内博士博后在意大利米兰理工大学交流" data-description="组内博士、博后在意大利米兰理工大学开展学术交流合作。"><img class="partner-photo" src="assets/images/polimi-exchange.webp" alt="组内博士博后在意大利米兰理工大学交流合影" decoding="async" loading="lazy"></button>
+
+                  <div>
+
+                    <h4>意大利米兰理工大学</h4>
+
+                    <p>面向复杂系统、智能决策与交叉科学问题保持稳定合作交流，组内博士、博后曾赴该校开展合作研究。</p>
+
+                  </div>
+
+                  <span class="partner-meta">Italy</span>
+
+                </section>
+
+              </div>
+
+            </article>
 
             <template id="exchange-acl">
               <article class="exchange-entry" aria-labelledby="exchange-acl-title">
@@ -4177,53 +4077,6 @@
 
         </section>
 
-        <section class="section" id="projects">
-
-          <div class="container">
-
-            <div class="section-head">
-
-              <div>
-
-                <h2>课题组承担项目</h2>
-
-              </div>
-
-              <p class="lead">以下列出课题组承担的部分代表性项目，涵盖国家重点研发计划、国家自然科学基金与行业合作课题。</p>
-
-            </div>
-
-            <div class="table-wrap project-table-scroll" role="region" aria-label="课题组承担项目列表" tabindex="0">
-
-              <table class="ds-table"><thead><tr><th>类别</th><th>来源单位</th><th>项目名称</th><th class="num-col">起止年份</th></tr></thead>
-
-                <tbody>
-
-                  <tr><td>国家重点研发计划</td><td>工业与信息化部</td><td>智能服务适配理论与关键技术</td><td class="num-col">2019-2022</td></tr>
-
-                  <tr><td>国家自然科学基金重点</td><td>国家自然科学基金重点</td><td>在线大规模协同学习的机理与方法研究</td><td class="num-col">2016-2020</td></tr>
-
-                  <tr><td>国家重点研发计划</td><td>国家石油天然气管网集团有限公司</td><td>全时域高响应超大规模流体管网智能决策系统</td><td class="num-col">2025-2027</td></tr>
-
-                  <tr><td>国家自然科学基金</td><td>浙江大学</td><td>基于新型架构的行业大模型研究</td><td class="num-col">2025-2026</td></tr>
-
-                  <tr><td>国家重点实验室自主课题</td><td>华为有限公司</td><td>科学计算及流体仿真套件技术</td><td class="num-col">2022-2023</td></tr>
-
-                  <tr><td>国家重点实验室自主课题</td><td>中航技进出口有限责任公司</td><td>大数据量实时计算运价业务微服务框架支撑课题技术服务项目</td><td class="num-col">2023-2024</td></tr>
-
-                  <tr><td>国家重点实验室自主课题</td><td>国网江苏电力有限公司</td><td>业务中台智慧运营关键技术研究及应用</td><td class="num-col">2022-2024</td></tr>
-
-                  <tr><td>国家重点实验室自主课题</td><td>中国民航信息网络股份有限公司研发中心</td><td>基于大语言模型辅助的微服务接口开发关键技术研究课题技术服务</td><td class="num-col">2025-2026</td></tr>
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        </section>
       </main>
       <footer class="pagefoot">
         <div class="container footer-inner">
