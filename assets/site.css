@@ -600,6 +600,22 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .exchange-card-title { grid-column: 1; color: var(--blue-ink); font-size: clamp(1.05rem, 2vw, 1.36rem); font-weight: 600; line-height: 1.32; }
 .exchange-card-topic { grid-column: 1; color: var(--muted); font-size: 0.91rem; }
 
+.exchange-card--photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas: "photos copy";
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 32px);
+  padding: 14px 20px;
+}
+
+.exchange-card--photos .exchange-copy { grid-area: copy; }
+.exchange-card--photos .exchange-card-title { margin-top: 5px; scroll-margin-top: 12px; }
+.exchange-photo-grid { grid-area: photos; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.exchange-photo-grid .image-open { overflow: hidden; border-radius: var(--radius-small); }
+.exchange-photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.exchange-photo-grid .exchange-photo--venue { object-position: center bottom; }
+
 .pagefoot { grid-area: footer; padding-block: 20px; border-top: 1px solid var(--line); color: var(--muted); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .footer-inner strong { color: var(--deep-blue); }
@@ -712,6 +728,7 @@ dialog::backdrop { background: #031a35b8; }
   .exchange-brand { grid-column: 1; grid-row: auto; justify-self: start; }
   .exchange-brand img { max-width: 74px; max-height: 22px; }
   .exchange-card-meta { margin-top: 4px; gap: 0 8px; }
+  .exchange-card--photos { grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "photos"; padding: 12px; }
   .demo-dialog.has-playlist .demo-dialog-body { grid-template-columns: minmax(0, 1fr); }
 }
 

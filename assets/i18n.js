@@ -2,7 +2,8 @@
   'use strict';
   const languages = ['zh', 'en', 'fr', 'de', 'es'];
   const languageNames = { zh: '中文', en: 'English', fr: 'Français', de: 'Deutsch', es: 'Español' };
-  const storageKey = 'admire-language-preference';
+  const storageKey = 'admire-language-selection';
+  const defaultLanguage = 'en';
   const rows = window.ADMIRE_CATALOG || [];
   const normalize = value => value.trim().replace(/\s+/g, ' ');
   const lookup = new Map();
@@ -14,11 +15,11 @@
     }
   }
   const baseLanguage = value => String(value || '').toLowerCase().split(/[-_]/)[0];
-  const browserLanguage = () => (navigator.languages || [navigator.language]).map(baseLanguage).find(code => languages.includes(code)) || 'en';
+  const browserLanguage = () => (navigator.languages || [navigator.language]).map(baseLanguage).find(code => languages.includes(code)) || defaultLanguage;
   const readPreference = () => { try { return localStorage.getItem(storageKey); } catch { return null; } };
   const savedLanguage = readPreference();
   let automatic = false;
-  let language = 'en';
+  let language = defaultLanguage;
   const attributes = ['alt', 'title', 'aria-label', 'placeholder', 'data-title', 'data-description', 'data-demo-title', 'data-demo-description', 'data-caption'];
   const originals = new WeakMap();
   const skipped = node => node.parentElement?.closest('script, style, noscript, [data-i18n-skip]');
@@ -124,7 +125,7 @@
 
   function applyLanguage(code, persist = false) {
     automatic = code === 'auto';
-    language = automatic ? browserLanguage() : languages.includes(code) ? code : 'en';
+    language = automatic ? browserLanguage() : languages.includes(code) ? code : defaultLanguage;
     if (persist) {
       try { localStorage.setItem(storageKey, automatic ? 'auto' : language); } catch { /* Private browsing may block storage. */ }
     }

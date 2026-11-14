@@ -10,8 +10,11 @@
   const links = [...nav.querySelectorAll('a')];
   const sections = [...main.querySelectorAll(':scope > .section')];
   const pages = new Map([['#top', home], ...sections.map(section => ['#' + section.id, section])]);
-  const publicationAnchors = new Map(
-    [...document.querySelectorAll('#papers [data-publication-anchor]')].map(heading => ['#' + heading.id, heading])
+  const sectionAnchors = new Map(
+    [...main.querySelectorAll('[data-publication-anchor], [data-exchange-anchor]')].map(heading => [
+      '#' + heading.id,
+      { heading, pageHash: '#' + heading.closest('.section').id }
+    ])
   );
   const teamTabList = document.querySelector('.team-tabs');
   const teamTabs = [...teamTabList.querySelectorAll('[data-team-tab]')];
@@ -39,9 +42,9 @@
     if (window.location.hash === '#apply') history.replaceState(null, '', '#top');
     const fragment = window.location.hash;
     const teamTab = teamTabsByHash.get(fragment);
-    const publicationHeading = publicationAnchors.get(fragment);
-    const anchor = fragment === professorHash ? professorHeading : publicationHeading;
-    const sectionHash = teamTab ? '#mentor' : publicationHeading ? '#papers' : fragment;
+    const sectionAnchor = sectionAnchors.get(fragment);
+    const anchor = fragment === professorHash ? professorHeading : sectionAnchor?.heading;
+    const sectionHash = teamTab ? '#mentor' : sectionAnchor?.pageHash ?? fragment;
     const hash = pages.has(sectionHash) ? sectionHash : '#top';
     const page = pages.get(hash);
     for (const section of pages.values()) section.hidden = section !== page;
@@ -89,7 +92,7 @@
   });
   document.addEventListener('click', event => {
     const link = event.target.closest('a[href^="#"]');
-    if (!link || (!pages.has(link.hash) && !teamTabsByHash.has(link.hash) && !publicationAnchors.has(link.hash)) ||
+    if (!link || (!pages.has(link.hash) && !teamTabsByHash.has(link.hash) && !sectionAnchors.has(link.hash)) ||
         event.defaultPrevented || event.button !== 0 ||
         event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
