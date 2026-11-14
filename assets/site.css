@@ -613,6 +613,8 @@ dialog::backdrop { background: #031a35b8; }
 .lightbox-body > img, .exchange-zoom-image { width: auto; max-height: 67dvh; margin-inline: auto; object-fit: contain; }
 .lightbox-details { margin-top: 13px; }
 .lightbox-description { white-space: pre-line; }
+.lightbox-description p { white-space: normal; }
+.lightbox-description p + p { margin-top: 0.85em; }
 .lightbox-email, .lightbox-original { display: inline-block; margin-top: 8px; overflow-wrap: anywhere; }
 .lightbox--profile { max-width: 690px; }
 .lightbox--profile .lightbox-body { display: grid; grid-template-columns: minmax(100px, 140px) minmax(0, 1fr); align-items: start; gap: 20px; }
