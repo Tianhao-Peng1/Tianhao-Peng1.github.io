@@ -1,6 +1,14 @@
 // Interface and content translations. The Chinese text is the lookup key.
 window.ADMIRE_CATALOG=[
 ["查看更早动态","Older news","Actualités précédentes","Ältere Meldungen","Noticias anteriores"],
+["ICDE 2024 学术交流","ICDE 2024 conference visit","Participation à ICDE 2024","Teilnahme an der ICDE 2024","Participación en ICDE 2024"],
+["荷兰 · 乌得勒支","Utrecht, Netherlands","Utrecht, Pays-Bas","Utrecht, Niederlande","Utrecht, Países Bajos"],
+["彭天豪在会上作 GraphRARE 报告并展示研究海报。","Tianhao Peng presented GraphRARE in a talk and a poster session.","Tianhao Peng a présenté GraphRARE lors d’un exposé et d’une session de posters.","Tianhao Peng stellte GraphRARE in einem Vortrag und bei einer Postersitzung vor.","Tianhao Peng presentó GraphRARE en una charla y en una sesión de pósteres."],
+["ICDE 2024 参会照片","ICDE 2024 photos","Photos d’ICDE 2024","Fotos der ICDE 2024","Fotos de ICDE 2024"],
+["彭天豪在 ICDE 2024 会场","Tianhao Peng at the ICDE 2024 venue","Tianhao Peng sur le lieu d’ICDE 2024","Tianhao Peng am Veranstaltungsort der ICDE 2024","Tianhao Peng en la sede de ICDE 2024"],
+["ICDE 2024 会议晚宴","ICDE 2024 conference dinner","Dîner de la conférence ICDE 2024","Konferenzdinner der ICDE 2024","Cena de la conferencia ICDE 2024"],
+["GraphRARE 海报展示","GraphRARE poster presentation","Présentation du poster GraphRARE","Posterpräsentation zu GraphRARE","Presentación del póster de GraphRARE"],
+["GraphRARE 现场报告","GraphRARE talk","Exposé sur GraphRARE","Vortrag zu GraphRARE","Charla sobre GraphRARE"],
 ["博士毕业生","PhD Alumni","Anciens doctorants","Promovierte Alumni","Egresados de doctorado"],
 ["硕士毕业生","Master’s Alumni","Diplômés de master","Master-Alumni","Egresados de máster"],
 ["刘雪虹","Xuehong Liu","Xuehong Liu","Xuehong Liu","Xuehong Liu"],
