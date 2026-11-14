@@ -17,6 +17,7 @@ window.ADMIRE_CATALOG=[
 ["楼奕华","Yihua Lou","Yihua Lou","Yihua Lou","Yihua Lou"],
 ["胡征慧","Zhenghui Hu","Zhenghui Hu","Zhenghui Hu","Zhenghui Hu"],
 ["杨京波","Jingbo Yang","Jingbo Yang","Jingbo Yang","Jingbo Yang"],
+["米兰大学","University of Milan","Université de Milan","Universität Mailand","Universidad de Milán"],
 ["王猛","Meng Wang","Meng Wang","Meng Wang","Meng Wang"],
 ["刘放","Fang Liu","Fang Liu","Fang Liu","Fang Liu"],
 ["赵鹏瑞","Pengrui Zhao","Pengrui Zhao","Pengrui Zhao","Pengrui Zhao"],
