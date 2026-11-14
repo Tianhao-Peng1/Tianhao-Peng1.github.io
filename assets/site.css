@@ -97,19 +97,13 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .site-laboratory { max-width: 325px; padding-inline-start: 20px; border-inline-start: 1px solid #a3adb7; font-size: 19px; font-weight: 700; line-height: 1.25; }
 
 .site-brand {
-  display: inline-flex;
-  align-items: center;
-  flex: none;
-  gap: 10px;
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(210px, 26vw, 255px);
   margin-inline-start: auto;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1;
 }
 
-.site-brand img { flex: none; width: 52px; }
-.site-wordmark { display: grid; gap: 4px; }
-.site-wordmark-agent { color: var(--blue-ink); font-size: 10px; letter-spacing: 0.18em; }
+.site-brand img { width: 100%; }
 
 .site-institutions { border-bottom: 1px solid #a3adb7; font: 700 clamp(15px, 1.9vw, 19px)/23px var(--institution-font); letter-spacing: 0.15px; }
 .site-institutions > div { display: inline-flex; flex-wrap: wrap; max-width: 100%; margin-bottom: -1px; border-bottom: 4px solid var(--beihang-blue); }
@@ -670,8 +664,7 @@ dialog::backdrop { background: #031a35b8; }
   .site-header-inner { min-height: 0; border-bottom: 2px solid var(--beihang-blue); }
   .site-identity { min-height: 60px; gap: 10px; }
   .site-university, .site-laboratory, .site-institutions { display: none; }
-  .site-brand { margin-inline-start: 0; font-size: 22px; }
-  .site-brand img { width: 36px; }
+  .site-brand { width: clamp(144px, 47vw, 180px); margin-inline-start: 0; }
   .site-menu-toggle { min-height: 38px; margin-inline-start: auto; padding-inline: 11px; border: 1px solid var(--line); background: var(--paper); font-size: 13px; }
   .site-menu-toggle:hover, .site-menu-toggle[aria-expanded="true"] { background: var(--ice); }
   .site-layout { display: block; }
