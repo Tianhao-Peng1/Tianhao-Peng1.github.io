@@ -6,6 +6,17 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script>
+    (() => {
+      // Safari 18 can retain a favicon for the bare homepage URL after the icon changes.
+      const home = new URL(window.location.href);
+      if (home.origin !== 'https://tianhao-peng1.github.io' || home.pathname !== '/') return;
+      if (!/\bVersion\/18\.[\d.]+ Safari\//.test(navigator.userAgent)) return;
+      home.pathname = '/index.html';
+      window.location.replace(home.href);
+    })();
+  </script>
+
   <title>ADMIRE Research Group | Beihang University</title>
   <meta name="description" content="The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.">
   <link rel="canonical" href="https://tianhao-peng1.github.io/">
