@@ -611,8 +611,10 @@ button { color: inherit; font: inherit; cursor: pointer; }
 
 .exchange-card--photos .exchange-copy { grid-area: copy; }
 .exchange-card--photos .exchange-card-title { margin-top: 5px; scroll-margin-top: 12px; }
+.exchange-photo { grid-area: photos; }
 .exchange-photo-grid { grid-area: photos; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
-.exchange-photo-grid .image-open { overflow: hidden; border-radius: var(--radius-small); }
+:is(.exchange-photo, .exchange-photo-grid) .image-open { overflow: hidden; border-radius: var(--radius-small); }
+.exchange-photo img { width: 100%; }
 .exchange-photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .exchange-photo-grid .exchange-photo--venue { object-position: center bottom; }
 
