@@ -10,7 +10,6 @@
   --muted: #454a50;
   --line: #dadee2;
   --font: Arial, Helvetica, FreeSans, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
-  --institution-font: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, "PingFang SC", serif;
   --site-max: 980px;
   --page-gutter: 20px;
   --radius: 0px;
@@ -70,7 +69,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .site-topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 10px;
   min-height: 30px;
   padding-inline: var(--page-gutter);
@@ -80,23 +79,12 @@ button { color: inherit; font: inherit; cursor: pointer; }
   line-height: 15px;
 }
 
-.site-affiliation {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-
-.site-affiliation a { color: inherit; text-decoration: none; }
-.site-affiliation a:hover { text-decoration: underline; }
-.site-affiliation > a:not(:first-child)::before { content: "»"; display: inline-block; margin-inline: 5px; }
-.site-affiliation .site-university-mark { display: none; }
-
-.site-header-inner { min-height: 180px; padding-inline: var(--page-gutter); }
-.site-identity { display: flex; align-items: center; gap: 20px; min-height: 115px; }
+.site-university-mobile { display: none; }
+.site-header-inner { padding-inline: var(--page-gutter); }
+.site-identity { display: flex; align-items: center; gap: 20px; min-height: 115px; border-bottom: 3px solid var(--beihang-blue); }
 .site-identity a { color: var(--ink); text-decoration: none; }
-.site-university { display: flex; flex: 0 1 270px; align-items: center; gap: 12px; font-size: 26px; font-weight: 700; line-height: 1.15; }
-.site-university-mark { flex: none; width: 54px; border-radius: 50%; }
-.site-laboratory { max-width: 325px; padding-inline-start: 20px; border-inline-start: 1px solid #a3adb7; font-size: 19px; font-weight: 700; line-height: 1.25; }
+.site-university { flex: 0 1 265px; min-width: 185px; }
+.site-laboratory { max-width: 335px; padding-inline-start: 20px; border-inline-start: 1px solid #a3adb7; font-size: 19px; font-weight: 700; line-height: 1.25; }
 
 .site-brand {
   display: block;
@@ -106,11 +94,6 @@ button { color: inherit; font: inherit; cursor: pointer; }
 }
 
 .site-brand img { width: 100%; }
-
-.site-institutions { border-bottom: 1px solid #a3adb7; font: 700 clamp(15px, 1.9vw, 19px)/23px var(--institution-font); letter-spacing: 0.15px; }
-.site-institutions > div { display: inline-flex; flex-wrap: wrap; max-width: 100%; margin-bottom: -1px; border-bottom: 4px solid var(--beihang-blue); }
-.site-institutions a { color: inherit; text-decoration: none; }
-.site-institutions > div > a:not(:first-child)::before { content: "–"; display: inline-block; margin-inline: 8px; }
 
 .site-layout {
   display: grid;
@@ -672,13 +655,11 @@ dialog::backdrop { background: #031a35b8; }
 @media (max-width: 800px) {
   :root { --header-height: 94px; }
   .site-header { position: sticky; top: 0; }
-  .site-topbar { min-height: 30px; padding-block: 3px; }
-  .site-affiliation a:not(:first-child) { display: none; }
-  .site-affiliation-university { display: inline-flex; align-items: center; gap: 6px; }
-  .site-affiliation .site-university-mark { display: block; width: 20px; }
-  .site-header-inner { min-height: 0; border-bottom: 2px solid var(--beihang-blue); }
-  .site-identity { min-height: 60px; gap: 10px; }
-  .site-university, .site-laboratory, .site-institutions { display: none; }
+  .site-topbar { justify-content: space-between; min-height: 38px; padding-block: 4px; }
+  .site-university-mobile { display: block; width: 148px; }
+  .site-header-inner { border-bottom: 2px solid var(--beihang-blue); }
+  .site-identity { min-height: 60px; gap: 10px; border-bottom: 0; }
+  .site-university, .site-laboratory { display: none; }
   .site-brand { width: clamp(144px, 47vw, 180px); margin-inline-start: 0; }
   .site-menu-toggle { min-height: 38px; margin-inline-start: auto; padding-inline: 11px; border: 1px solid var(--line); background: var(--paper); font-size: 13px; }
   .site-menu-toggle:hover, .site-menu-toggle[aria-expanded="true"] { background: var(--ice); }
