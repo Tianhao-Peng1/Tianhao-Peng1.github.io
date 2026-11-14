@@ -591,6 +591,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 
 .exchange-card > button:hover { background: var(--ice); }
 .exchange-card > button:focus-visible { outline-offset: -3px; }
+.exchange-card [data-exchange-anchor] { scroll-margin-top: 12px; }
 .exchange-cover { width: 100%; aspect-ratio: 5 / 3; border-radius: var(--radius-small); object-fit: cover; }
 .exchange-cover--aaai { object-position: center 30%; }
 .exchange-card-copy { display: grid; grid-template-columns: minmax(0, 1fr) 100px; align-items: center; column-gap: 14px; }
@@ -610,9 +611,9 @@ button { color: inherit; font: inherit; cursor: pointer; }
 }
 
 .exchange-card--photos .exchange-copy { grid-area: copy; }
-.exchange-card--photos .exchange-card-title { margin-top: 5px; scroll-margin-top: 12px; }
+.exchange-card--photos .exchange-card-title { margin-top: 5px; }
 .exchange-photo { grid-area: photos; }
-.exchange-photo-grid { grid-area: photos; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.exchange-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 :is(.exchange-photo, .exchange-photo-grid) .image-open { overflow: hidden; border-radius: var(--radius-small); }
 .exchange-photo img { width: 100%; }
 .exchange-photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }

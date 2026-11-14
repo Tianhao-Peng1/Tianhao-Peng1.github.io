@@ -423,7 +423,8 @@
       content.querySelector('.exchange-entry').setAttribute('aria-labelledby', exchangeTitle.id);
       heading.remove();
       exchangeBody.replaceChildren(content);
-      initializeGallery(exchangeBody.querySelector('[data-exchange-gallery]'));
+      const gallery = exchangeBody.querySelector('[data-exchange-gallery]');
+      if (gallery) initializeGallery(gallery);
       exchange.showModal();
       exchange.scrollTop = 0;
     });
