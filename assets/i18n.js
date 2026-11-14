@@ -51,7 +51,9 @@
       const trailing = original.match(/\s*$/)[0];
       return leading + row[index] + trailing;
     }
-    let match = key.match(/^(\d+)\s*篇$/);
+    let match = key.match(/^(\d{4})\s*级$/);
+    if (match) return [key,`${match[1]} intake`,`Entrée en ${match[1]}`,`Studienbeginn ${match[1]}`,`Ingreso en ${match[1]}`][index];
+    match = key.match(/^(\d+)\s*篇$/);
     if (match) return [`${match[1]} 篇`,`${match[1]} papers`,`${match[1]} articles`,`${match[1]} Arbeiten`,`${match[1]} artículos`][index];
     match = key.match(/^共\s*(\d+)\s*篇$/);
     if (match) return [key,`${match[1]} papers in total`,`${match[1]} articles au total`,`Insgesamt ${match[1]} Arbeiten`,`${match[1]} artículos en total`][index];
