@@ -10,6 +10,7 @@ window.ADMIRE_CATALOG=[
 ["刘泽平","Zeping Liu","Zeping Liu","Zeping Liu","Zeping Liu"],
 ["王枭","Xiao Wang","Xiao Wang","Xiao Wang","Xiao Wang"],
 ["邓京","Jing Deng","Jing Deng","Jing Deng","Jing Deng"],
+["石荣晔","Rongye Shi","Rongye Shi","Rongye Shi","Rongye Shi"],
 ["蒲彦均","Yanjun Pu","Yanjun Pu","Yanjun Pu","Yanjun Pu"],
 ["查看蒲彦均介绍","View Yanjun Pu’s profile","Voir le profil de Yanjun Pu","Profil von Yanjun Pu ansehen","Ver el perfil de Yanjun Pu"],
 ["博士后","Postdoctoral Researcher","Chercheur postdoctoral","Postdoktorand","Investigador posdoctoral"],
