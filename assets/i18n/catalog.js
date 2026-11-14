@@ -1,6 +1,10 @@
 // Interface and content translations. The Chinese text is the lookup key.
 window.ADMIRE_CATALOG=[
 ["查看更早动态","Older news","Actualités précédentes","Ältere Meldungen","Noticias anteriores"],
+["ACL 2024 学术交流","ACL 2024 conference visit","Participation à ACL 2024","Teilnahme an der ACL 2024","Participación en ACL 2024"],
+["泰国 · 曼谷","Bangkok, Thailand","Bangkok, Thaïlande","Bangkok, Thailand","Bangkok, Tailandia"],
+["彭天豪赴曼谷参加第 62 届计算语言学协会年会。","Tianhao Peng attended the 62nd Annual Meeting of the Association for Computational Linguistics in Bangkok.","Tianhao Peng a participé à la 62e réunion annuelle de l’Association for Computational Linguistics à Bangkok.","Tianhao Peng nahm in Bangkok an der 62. Jahrestagung der Association for Computational Linguistics teil.","Tianhao Peng asistió a la 62.ª reunión anual de la Association for Computational Linguistics en Bangkok."],
+["彭天豪在曼谷 ACL 2024 会场","Tianhao Peng at the ACL 2024 venue in Bangkok","Tianhao Peng à la conférence ACL 2024 à Bangkok","Tianhao Peng am Veranstaltungsort der ACL 2024 in Bangkok","Tianhao Peng en la sede de ACL 2024 en Bangkok"],
 ["ICDE 2024 学术交流","ICDE 2024 conference visit","Participation à ICDE 2024","Teilnahme an der ICDE 2024","Participación en ICDE 2024"],
 ["荷兰 · 乌得勒支","Utrecht, Netherlands","Utrecht, Pays-Bas","Utrecht, Niederlande","Utrecht, Países Bajos"],
 ["彭天豪在会上作 GraphRARE 报告并展示研究海报。","Tianhao Peng presented GraphRARE in a talk and a poster session.","Tianhao Peng a présenté GraphRARE lors d’un exposé et d’une session de posters.","Tianhao Peng stellte GraphRARE in einem Vortrag und bei einer Postersitzung vor.","Tianhao Peng presentó GraphRARE en una charla y en una sesión de pósteres."],
