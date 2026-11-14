@@ -440,8 +440,6 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .portrait-inset { transform: scale(1.35); transform-origin: 50% 25%; }
 :is(.team-alumnus, .team-faculty-member) .team-member-portrait { flex-basis: 59px; width: 59px; }
 .team-member h4, .team-alumnus h5, .team-faculty-member h4 { margin: 0; font-size: 14px; font-weight: 700; line-height: 18px; }
-.team-member > div { min-width: 0; }
-.team-enrollment { margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 18px; }
 .team-alumnus p, .team-faculty-member p { margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 18px; }
 .team-affiliation { color: var(--ink); }
 .team-photos { margin-top: 22px; }
@@ -596,6 +594,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .exchange-card [data-exchange-anchor] { scroll-margin-top: 12px; }
 .exchange-cover { width: 100%; aspect-ratio: 5 / 3; border-radius: var(--radius-small); object-fit: cover; }
 .exchange-cover--aaai { object-position: center 30%; }
+.exchange-cover--acl { object-position: center top; }
 .exchange-card-copy { display: grid; grid-template-columns: minmax(0, 1fr) 100px; align-items: center; column-gap: 14px; }
 .exchange-brand { grid-column: 2; grid-row: 1 / span 3; justify-self: center; }
 .exchange-brand img { width: auto; max-height: 50px; object-fit: contain; }
@@ -603,18 +602,6 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .exchange-card-title { grid-column: 1; color: var(--blue-ink); font-size: clamp(1.05rem, 2vw, 1.36rem); font-weight: 600; line-height: 1.32; }
 .exchange-card-topic { grid-column: 1; color: var(--muted); font-size: 0.91rem; }
 
-.exchange-card--photos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-areas: "photos copy";
-  align-items: center;
-  gap: clamp(16px, 2.4vw, 32px);
-  padding: 14px 20px;
-}
-
-.exchange-card--photos .exchange-copy { grid-area: copy; }
-.exchange-card--photos .exchange-card-title { margin-top: 5px; }
-.exchange-photo { grid-area: photos; }
 .exchange-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 :is(.exchange-photo, .exchange-photo-grid) .image-open { overflow: hidden; border-radius: var(--radius-small); }
 .exchange-photo img { width: 100%; }
@@ -733,7 +720,6 @@ dialog::backdrop { background: #031a35b8; }
   .exchange-brand { grid-column: 1; grid-row: auto; justify-self: start; }
   .exchange-brand img { max-width: 74px; max-height: 22px; }
   .exchange-card-meta { margin-top: 4px; gap: 0 8px; }
-  .exchange-card--photos { grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "photos"; padding: 12px; }
   .demo-dialog.has-playlist .demo-dialog-body { grid-template-columns: minmax(0, 1fr); }
 }
 
