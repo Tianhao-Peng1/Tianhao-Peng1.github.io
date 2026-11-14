@@ -440,6 +440,8 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .portrait-inset { transform: scale(1.35); transform-origin: 50% 25%; }
 :is(.team-alumnus, .team-faculty-member) .team-member-portrait { flex-basis: 59px; width: 59px; }
 .team-member h4, .team-alumnus h5, .team-faculty-member h4 { margin: 0; font-size: 14px; font-weight: 700; line-height: 18px; }
+.team-member > div { min-width: 0; }
+.team-enrollment { margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 18px; }
 .team-alumnus p, .team-faculty-member p { margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 18px; }
 .team-affiliation { color: var(--ink); }
 .team-photos { margin-top: 22px; }
