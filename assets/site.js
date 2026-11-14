@@ -141,6 +141,8 @@
 
     const title = trigger.dataset.title || thumbnail?.alt || '图片';
     const description = trigger.dataset.description || '';
+    const descriptionTemplate = document.getElementById(trigger.dataset.descriptionTemplate || '')?.content;
+    const hasDescription = Boolean(descriptionTemplate || description);
     const isProfile = trigger.dataset.profile === 'true';
     const email = isProfile ? trigger.dataset.profileEmail || '' : '';
     lightboxTitle.textContent = title;
@@ -149,9 +151,10 @@
     lightboxOriginal.hidden = !localized || !original;
     if (localized && original) lightboxOriginal.href = original;
     else lightboxOriginal.removeAttribute('href');
-    lightboxDetails.hidden = !description && !email && lightboxOriginal.hidden;
-    lightboxDescription.textContent = description;
-    lightboxDescription.hidden = !description;
+    lightboxDetails.hidden = !hasDescription && !email && lightboxOriginal.hidden;
+    if (descriptionTemplate) lightboxDescription.replaceChildren(descriptionTemplate.cloneNode(true));
+    else lightboxDescription.textContent = description;
+    lightboxDescription.hidden = !hasDescription;
     lightboxEmail.hidden = !email;
     lightboxEmail.textContent = email;
     if (email) lightboxEmail.href = `mailto:${email}`;
