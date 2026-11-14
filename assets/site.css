@@ -600,6 +600,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .exchange-card-copy { display: grid; grid-template-columns: minmax(0, 1fr) 100px; align-items: center; column-gap: 14px; }
 .exchange-brand { grid-column: 2; grid-row: 1 / span 3; justify-self: center; }
 .exchange-brand img { width: auto; max-height: 50px; object-fit: contain; }
+.exchange-brand--icde img { height: 50px; aspect-ratio: 620 / 374; object-fit: cover; object-position: left center; }
 .exchange-card-meta, .exchange-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: 0.82rem; }
 .exchange-card-title { grid-column: 1; color: var(--blue-ink); font-size: clamp(1.05rem, 2vw, 1.36rem); font-weight: 600; line-height: 1.32; }
 .exchange-card-topic { grid-column: 1; color: var(--muted); font-size: 0.91rem; }
@@ -721,6 +722,7 @@ dialog::backdrop { background: #031a35b8; }
   .exchange-card-copy { grid-template-columns: minmax(0, 1fr); }
   .exchange-brand { grid-column: 1; grid-row: auto; justify-self: start; }
   .exchange-brand img { max-width: 74px; max-height: 22px; }
+  .exchange-brand--icde img { height: 22px; }
   .exchange-card-meta { margin-top: 4px; gap: 0 8px; }
   .demo-dialog.has-playlist .demo-dialog-body { grid-template-columns: minmax(0, 1fr); }
 }
