@@ -11,11 +11,16 @@
   const sections = [...main.querySelectorAll(':scope > .section')];
   const pages = new Map([['#top', home], ...sections.map(section => ['#' + section.id, section])]);
   const sectionAnchors = new Map(
-    [...main.querySelectorAll('[data-publication-anchor], [data-exchange-anchor]')].map(heading => [
-      '#' + heading.id,
-      { heading, pageHash: '#' + heading.closest('.section').id }
+    [...main.querySelectorAll('[data-section-anchor], [data-publication-anchor], [data-exchange-anchor]')].map(anchor => [
+      '#' + anchor.id,
+      { anchor, pageHash: '#' + anchor.closest('.section').id }
     ])
   );
+  const redirects = new Map([
+    ['#apply', '#top'],
+    ['#projects', '#lab'],
+    ['#open-source', '#experimental-platforms']
+  ]);
   const teamTabList = document.querySelector('.team-tabs');
   const teamTabs = [...teamTabList.querySelectorAll('[data-team-tab]')];
   const leaderTab = document.getElementById('team-tab-leader');
@@ -39,11 +44,12 @@
   }
 
   function showPage(focusContent = false) {
-    if (window.location.hash === '#apply') history.replaceState(null, '', '#top');
+    const target = redirects.get(window.location.hash);
+    if (target) history.replaceState(null, '', target);
     const fragment = window.location.hash;
     const teamTab = teamTabsByHash.get(fragment);
     const sectionAnchor = sectionAnchors.get(fragment);
-    const anchor = fragment === professorHash ? professorHeading : sectionAnchor?.heading;
+    const anchor = fragment === professorHash ? professorHeading : sectionAnchor?.anchor;
     const sectionHash = teamTab ? '#mentor' : sectionAnchor?.pageHash ?? fragment;
     const hash = pages.has(sectionHash) ? sectionHash : '#top';
     const page = pages.get(hash);
@@ -51,7 +57,7 @@
     if (teamTab) activateTeamTab(teamTab);
     currentLink?.removeAttribute('aria-current');
     currentLink = links.find(link => link.hash === hash);
-    currentLink.setAttribute('aria-current', 'page');
+    currentLink?.setAttribute('aria-current', 'page');
     backToTop.setAttribute('href', teamTab && teamTab !== leaderTab ? fragment : hash);
     setMenu(false);
     if (anchor) {
@@ -68,7 +74,7 @@
   menuToggle.addEventListener('click', () => {
     const open = nav.hidden;
     setMenu(open);
-    if (open) currentLink.focus();
+    if (open) (currentLink || links[0]).focus();
   });
   document.getElementById('language-toggle').addEventListener('click', () => setMenu(false));
   document.querySelector('.skip-link').addEventListener('click', event => {
