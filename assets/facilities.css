@@ -1,0 +1,33 @@
+.facilities-overview { margin: 24px 0; }
+.facilities-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line); }
+.facilities-stats > div { padding: 16px 10px; }
+.facilities-stats dt { color: var(--muted); }
+.facilities-stats dd { margin: 5px 0 0; font-size: 24px; line-height: 30px; color: var(--blue-ink); }
+.facilities-note { margin-top: 12px; color: var(--muted); }
+.facilities-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.facility-section { margin-top: 30px; }
+.facility-section > p { margin: 10px 0 16px; }
+.facility-section h4 { margin: 20px 0 10px; }
+.facility-table-wrap { overflow-x: auto; margin: 12px 0 20px; }
+.facility-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; line-height: 19px; }
+.facility-table caption { text-align: left; color: var(--muted); padding: 0 0 8px; }
+.facility-table th, .facility-table td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.facility-table thead { background: var(--ice); }
+.facility-table th { font-weight: 600; }
+.facility-table td:nth-child(2) { white-space: nowrap; }
+.facility-table tfoot { font-weight: 600; }
+.facility-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 14px 0; }
+.facility-photos figure { min-width: 0; }
+.facility-photos .image-open { display: block; width: 100%; padding: 0; border: 0; background: var(--ice); }
+.facility-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; }
+.facility-photos figcaption { margin-top: 7px; color: var(--muted); }
+.facility-photos--spaces img { object-fit: cover; }
+.facility-software { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.facility-software h4 { margin-top: 10px; }
+.facility-software p + p { margin-top: 10px; }
+@media (max-width: 640px) {
+  .facilities-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facility-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facility-software { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .facility-table th, .facility-table td { padding: 8px 6px; overflow-wrap: anywhere; }
+}

@@ -37,7 +37,9 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "name": "ADMIRE Research Group", "alternateName": ["ADMIRE", "Adaptive Distributed Multi-agent Intelligence via Recursive Evolution", "ADMIRE 课题组"], "url": "https://tianhao-peng1.github.io/", "logo": "https://tianhao-peng1.github.io/assets/icons/admire-mark-180.png", "description": "The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Beihang University", "alternateName": "北京航空航天大学", "url": "https://ev.buaa.edu.cn/"}}</script>
 
   <link rel="stylesheet" href="assets/site.css?v=20261115-navigation">
+  <link rel="stylesheet" href="assets/facilities.css?v=20261117">
   <script src="assets/i18n/catalog.js?v=20261115-profile" defer></script>
+  <script src="assets/facilities-i18n.js?v=20261117" defer></script>
   <script src="assets/site.js?v=20261115-navigation" defer></script>
   <script src="assets/i18n.js?v=20261114-roster" defer></script>
   <script src="assets/project-demos.js?v=20261113-figures" defer></script>
@@ -3539,7 +3541,7 @@
 
               <div class="resource-gallery">
 
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="算力集群" data-description="包含 8 卡 H100、8 卡 A100 80G、8 卡 PRO 6000、8 卡 A6000 PRO 等数十台 GPU 服务器，合计算力超过 100 PFLOPS。"><img src="assets/images/img34.webp" alt="算力集群" decoding="async" loading="lazy"></button><figcaption>算力集群</figcaption></figure>
+                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="算力集群" data-description="40 台服务器与工作站、81 张 GPU：本组 38 台 / 65 张，自所 2 台八卡 A6000 服务器 / 16 张。"><img src="assets/images/img34.webp" alt="算力集群" decoding="async" loading="lazy"></button><figcaption>算力集群</figcaption></figure>
 
                 <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="无人机2"><img src="assets/images/img35.webp" alt="无人机2" decoding="async" loading="lazy"></button><figcaption>无人机</figcaption></figure>
 
@@ -3554,6 +3556,132 @@
                 </div>
 
             </div>
+
+            <section class="facilities-overview" aria-labelledby="embodied-facilities">
+              <div class="demo-heading"><h3 id="embodied-facilities" tabindex="-1" data-section-anchor>具身智能实验设施</h3></div>
+              <p>机器人平台、实验场地、仿真软件与计算资源共同支持感知、导航、操作和多智能体协同研究。</p>
+              <dl class="facilities-stats">
+                <div><dt>机器人平台</dt><dd data-i18n-skip>176</dd></div>
+                <div><dt>北京实验场地</dt><dd data-i18n-skip>~300 m²</dd></div>
+                <div><dt>动捕系统</dt><dd data-i18n-skip>3</dd></div>
+                <div><dt>GPU</dt><dd data-i18n-skip>81</dd></div>
+              </dl>
+              <p class="facilities-note">统计包含北航与自所合作资源，依据团队介绍材料；合作资源不等同于课题组独立持有资源。</p>
+              <nav class="facilities-nav" aria-labelledby="embodied-facilities">
+                <a href="#facility-robots">机器人平台</a>
+                <a href="#facility-spaces">实验场地与动捕</a>
+                <a href="#facility-software">仿真与真机软件</a>
+                <a href="#facility-compute">计算资源</a>
+              </nav>
+            </section>
+
+            <section class="facility-section" aria-labelledby="facility-robots">
+              <h3 id="facility-robots" tabindex="-1" data-section-anchor>机器人平台</h3>
+              <h4>无人机 · 140 架</h4>
+              <div class="facility-photos">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="AMOVLAB P230"><img src="assets/facilities/p230.webp" width="640" height="480" alt="AMOVLAB P230" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>AMOVLAB P230</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Bitcraze Crazyflie"><img src="assets/facilities/crazyflie.webp" width="640" height="480" alt="Bitcraze Crazyflie" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>Bitcraze Crazyflie</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Ryze Tello"><img src="assets/facilities/tello.webp" width="640" height="480" alt="Ryze Tello" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>Ryze Tello</figcaption></figure>
+              </div>
+              <div class="facility-table-wrap">
+                <table class="facility-table">
+                  <thead><tr><th scope="col">平台</th><th scope="col">数量</th><th scope="col">实验用途</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row" data-i18n-skip>AMOVLAB P230</th><td data-i18n-skip>20</td><td>机载视觉导航、轨迹跟踪与多机控制</td></tr>
+                    <tr><th scope="row" data-i18n-skip>Bitcraze Crazyflie</th><td data-i18n-skip>50</td><td>室内编队、轨迹与集群策略</td></tr>
+                    <tr><th scope="row" data-i18n-skip>Ryze Tello</th><td data-i18n-skip>20</td><td>轻量视觉与飞行编程</td></tr>
+                    <tr><th scope="row">自所补充无人机（多型号）</th><td data-i18n-skip>50</td><td>合作平台资源</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>地面移动巡检 · 21 台</h4>
+              <div class="facility-photos">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="SCOUT MINI R&amp;D KIT"><img src="assets/facilities/scout-mini.webp" width="640" height="480" alt="SCOUT MINI R&amp;D KIT" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>SCOUT MINI R&amp;D KIT</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="LIMO"><img src="assets/facilities/limo.webp" width="640" height="480" alt="LIMO" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>LIMO</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Unitree Go2 EDU"><img src="assets/facilities/go2.webp" width="640" height="480" alt="Unitree Go2 EDU" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>Unitree Go2 EDU</figcaption></figure>
+              </div>
+              <div class="facility-table-wrap">
+                <table class="facility-table">
+                  <thead><tr><th scope="col">平台</th><th scope="col">数量</th><th scope="col">实验用途</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row" data-i18n-skip>SCOUT</th><td data-i18n-skip>3</td><td>导航与多车协同</td></tr>
+                    <tr><th scope="row" data-i18n-skip>SCOUT MINI R&amp;D KIT</th><td data-i18n-skip>1</td><td>室内外导航与路径规划</td></tr>
+                    <tr><th scope="row" data-i18n-skip>LIMO</th><td data-i18n-skip>9</td><td>多车导航与沙盘任务</td></tr>
+                    <tr><th scope="row" data-i18n-skip>YUHESEN FW-mid</th><td data-i18n-skip>3</td><td>横移与路径跟踪</td></tr>
+                    <tr><th scope="row" data-i18n-skip>Unitree Go2 EDU</th><td data-i18n-skip>5</td><td>四足导航、巡检与车狗协同；北航 3 台、自所 2 台</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>移动机械臂 · 15 套</h4>
+              <div class="facility-photos">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="TRACER + PiPER"><img src="assets/facilities/tracer-piper.webp" width="640" height="480" alt="TRACER + PiPER" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>TRACER + PiPER</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="LIMO COBOT"><img src="assets/facilities/limo-cobot.webp" width="640" height="480" alt="LIMO COBOT" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>LIMO COBOT</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="COBOT MAGIC"><img src="assets/facilities/cobot-magic.webp" width="640" height="480" alt="COBOT MAGIC" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>COBOT MAGIC</figcaption></figure>
+              </div>
+              <div class="facility-table-wrap">
+                <table class="facility-table">
+                  <thead><tr><th scope="col">平台</th><th scope="col">数量</th><th scope="col">实验用途</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row" data-i18n-skip>SCOUT + Manipulator</th><td data-i18n-skip>2</td><td>移动抓取与搬运</td></tr>
+                    <tr><th scope="row" data-i18n-skip>TRACER + PiPER</th><td data-i18n-skip>2</td><td>移动抓取与视觉导航操作</td></tr>
+                    <tr><th scope="row" data-i18n-skip>LIMO COBOT</th><td data-i18n-skip>10</td><td>抓放、转运与视觉示教；北航 5 套、自所 5 套</td></tr>
+                    <tr><th scope="row" data-i18n-skip>COBOT MAGIC</th><td data-i18n-skip>1</td><td>双臂遥操作、示教采集与模仿学习</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="facility-section" aria-labelledby="facility-spaces">
+              <h3 id="facility-spaces" tabindex="-1" data-section-anchor>实验场地与动捕</h3>
+              <p>北航北京 100 m²，自所约 200 m²。道路、建筑与目标区域构成可重复布置的沙盘环境，支持空地协同、导航、搜索及多机器人任务。</p>
+              <div class="facility-photos facility-photos--spaces">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="北航城市沙盘"><img src="assets/facilities/beihang-sandbox.webp" width="960" height="720" alt="北航城市沙盘" loading="lazy" decoding="async"></button><figcaption>北航城市沙盘</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="自所实验场地"><img src="assets/facilities/partner-spaces.webp" width="960" height="720" alt="自所实验场地" loading="lazy" decoding="async"></button><figcaption>自所实验场地</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="运动捕捉设备"><img src="assets/facilities/motion-capture.webp" width="640" height="480" alt="运动捕捉设备" loading="lazy" decoding="async"></button><figcaption>运动捕捉设备</figcaption></figure>
+              </div>
+              <p>3 套动捕系统提供位置与姿态观测，支持轨迹测量、协同控制及虚实坐标映射。</p>
+            </section>
+
+            <section class="facility-section" aria-labelledby="facility-software">
+              <h3 id="facility-software" tabindex="-1" data-section-anchor>仿真与真机软件</h3>
+              <div class="facility-software">
+                <div>
+                  <h4>已有基础</h4>
+                  <p>天机平台支持基于 Unreal 场景与容器化服务的数百智能体仿真。团队已有 MARL 追逐、导航真机实验，以及机械臂示教、策略训练与实机测试经验。</p>
+                </div>
+                <div>
+                  <h4>建设方向</h4>
+                  <p>Harness 统一异构平台的高层任务、命令与状态接口，并适配底盘和四足 SDK。首期从 1 车 + 1 狗的协作语言导航任务起步，后续扩展无人机。</p>
+                  <p>Isaac Sim / Isaac Lab 链路处于建设阶段，覆盖建模、统一观测、协作策略训练、扰动验证、ROS 2 真机部署和评测反馈；复用平台成熟的底层控制器。</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="facility-section" aria-labelledby="facility-compute">
+              <h3 id="facility-compute" tabindex="-1" data-section-anchor>计算资源</h3>
+              <p>40 台服务器与工作站、81 张 GPU：本组 38 台 / 65 张，自所 2 台八卡 A6000 服务器 / 16 张。</p>
+              <div class="facility-table-wrap">
+                <table class="facility-table">
+                  <thead><tr><th scope="col">GPU 型号</th><th scope="col">本组</th><th scope="col">自所</th><th scope="col">合计</th></tr></thead>
+                  <tbody data-i18n-skip>
+                    <tr><th scope="row">V100 32GB</th><td>2</td><td>0</td><td>2</td></tr>
+                    <tr><th scope="row">A100 40GB</th><td>10</td><td>0</td><td>10</td></tr>
+                    <tr><th scope="row">A100 80GB</th><td>5</td><td>0</td><td>5</td></tr>
+                    <tr><th scope="row">H100</th><td>9</td><td>0</td><td>9</td></tr>
+                    <tr><th scope="row">A6000 48GB</th><td>14</td><td>16</td><td>30</td></tr>
+                    <tr><th scope="row">RTX 4090 24GB</th><td>22</td><td>0</td><td>22</td></tr>
+                    <tr><th scope="row">RTX 3090 24GB</th><td>3</td><td>0</td><td>3</td></tr>
+                  </tbody>
+                  <tfoot><tr><th scope="row">合计</th><td data-i18n-skip>65</td><td data-i18n-skip>16</td><td data-i18n-skip>81</td></tr></tfoot>
+                </table>
+              </div>
+              <p>支持感知模型、群体强化学习、导航与操作策略的训练、对照实验和真机部署迭代。</p>
+            </section>
+
+            <section class="facility-section" aria-labelledby="facility-tasks">
+              <h3 id="facility-tasks" tabindex="-1" data-section-anchor>场景与合作任务</h3>
+              <p>已有方法包括知识增强视觉问答、三维目标检测、语言导航与多智能体学习。后续合作面向协同感知、主动探索、跨区域巡检、移动操作及长时序协作，具体任务与评测方案共同定义。</p>
+            </section>
 
             <section aria-labelledby="experimental-platforms">
               <div class="demo-heading"><h3 id="experimental-platforms" tabindex="-1" data-section-anchor>实验平台</h3><span>虚实融合、群体协同、机器人操作与外场实景</span></div>
