@@ -37,9 +37,9 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "name": "ADMIRE Research Group", "alternateName": ["ADMIRE", "Adaptive Distributed Multi-agent Intelligence via Recursive Evolution", "ADMIRE 课题组"], "url": "https://tianhao-peng1.github.io/", "logo": "https://tianhao-peng1.github.io/assets/icons/admire-mark-180.png", "description": "The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Beihang University", "alternateName": "北京航空航天大学", "url": "https://ev.buaa.edu.cn/"}}</script>
 
   <link rel="stylesheet" href="assets/site.css?v=20261115-navigation">
-  <link rel="stylesheet" href="assets/facilities.css?v=20261117">
+  <link rel="stylesheet" href="assets/facilities.css?v=20261117-tree">
   <script src="assets/i18n/catalog.js?v=20261115-profile" defer></script>
-  <script src="assets/facilities-i18n.js?v=20261117" defer></script>
+  <script src="assets/facilities-i18n.js?v=20261117-tree" defer></script>
   <script src="assets/site.js?v=20261115-navigation" defer></script>
   <script src="assets/i18n.js?v=20261114-roster" defer></script>
   <script src="assets/project-demos.js?v=20261113-figures" defer></script>
@@ -3527,123 +3527,180 @@
         </section>
 
         <section class="section" id="resources" aria-labelledby="facilities-title">
-          <div class="container">
-
-            <div class="resource-layout">
-
-              <div>
+          <div class="container"><div>
 
                 <h2 id="facilities-title">科研条件</h2>
 
                 <p class="lead">课题组依托全国重点实验室开展研究，科研工作由算力集群、室内试验场地与无人系统等条件支撑，覆盖软件智能体、具身群体智能和科学计算，并与国内外高水平团队保持长期科研合作。</p>
 
-              </div>
-
-              <div class="resource-gallery">
-
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="算力集群" data-description="40 台服务器与工作站、81 张 GPU：本组 38 台 / 65 张，自所 2 台八卡 A6000 服务器 / 16 张。"><img src="assets/images/img34.webp" alt="算力集群" decoding="async" loading="lazy"></button><figcaption>算力集群</figcaption></figure>
-
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="无人机2"><img src="assets/images/img35.webp" alt="无人机2" decoding="async" loading="lazy"></button><figcaption>无人机</figcaption></figure>
-
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="实验沙盘场地"><img src="assets/images/img36.webp" alt="实验沙盘场地" decoding="async" loading="lazy"></button><figcaption>实验场地</figcaption></figure>
-
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="实验机器人"><img src="assets/images/img37.webp" alt="实验机器人" decoding="async" loading="lazy"></button><figcaption>机械臂</figcaption></figure>
-
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="机器狗"><img src="assets/images/img38.webp" alt="机器狗" decoding="async" loading="lazy"></button><figcaption>机器狗</figcaption></figure>
-
-                <figure class="image-card"><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="人形机器人"><img src="assets/images/img39.webp" alt="人形机器人" decoding="async" loading="lazy"></button><figcaption>人形机器人</figcaption></figure>
-
-                </div>
-
-            </div>
-
-            <section class="facilities-overview" aria-labelledby="embodied-facilities">
-              <div class="demo-heading"><h3 id="embodied-facilities" tabindex="-1" data-section-anchor>具身智能实验设施</h3></div>
-              <p>机器人平台、实验场地、仿真软件与计算资源共同支持感知、导航、操作和多智能体协同研究。</p>
-              <dl class="facilities-stats">
-                <div><dt>机器人平台</dt><dd data-i18n-skip>176</dd></div>
-                <div><dt>北京实验场地</dt><dd data-i18n-skip>~300 m²</dd></div>
-                <div><dt>动捕系统</dt><dd data-i18n-skip>3</dd></div>
-                <div><dt>GPU</dt><dd data-i18n-skip>81</dd></div>
-              </dl>
-              <p class="facilities-note">统计包含北航与自所合作资源，依据团队介绍材料；合作资源不等同于课题组独立持有资源。</p>
-              <nav class="facilities-nav" aria-labelledby="embodied-facilities">
-                <a href="#facility-robots">机器人平台</a>
-                <a href="#facility-spaces">实验场地与动捕</a>
-                <a href="#facility-software">仿真与真机软件</a>
-                <a href="#facility-compute">计算资源</a>
-              </nav>
-            </section>
-
-            <section class="facility-section" aria-labelledby="facility-robots">
-              <h3 id="facility-robots" tabindex="-1" data-section-anchor>机器人平台</h3>
-              <h4>无人机 · 140 架</h4>
+              </div><section class="facilities-overview">
+      <h3 id="embodied-facilities" tabindex="-1" data-section-anchor="">设施总览</h3>
+      <nav class="facility-tree" aria-labelledby="embodied-facilities">
+        <div class="facility-tree-root">具身智能实验设施</div>
+        <ol class="facility-tree-branches">
+          <li class="facility-tree-branch facility-tree-branch--hardware">
+            <a class="facility-tree-title" href="#facility-hardware"><span data-i18n-skip="">01</span><strong>硬件种类与数量</strong></a>
+            <ul>
+              <li><a href="#facility-uavs">无人机 · 140 架</a><span data-i18n-skip="">P230 ×20 / Crazyflie ×50 / Tello ×20</span><small>自所补充无人机（多型号）</small><span data-i18n-skip="">×50</span></li>
+              <li><a href="#facility-ground">地面移动巡检 · 21 台</a><span data-i18n-skip="">SCOUT ×3 / SCOUT MINI ×1 / LIMO ×9 / FW-mid ×3 / Go2 EDU ×5</span></li>
+              <li><a href="#facility-manipulation">移动机械臂 · 15 套</a><span data-i18n-skip="">SCOUT + Manipulator ×2 / TRACER + PiPER ×2 / LIMO COBOT ×10 / COBOT MAGIC ×1</span></li>
+              <li><a href="#facility-compute">计算资源</a><span data-i18n-skip="">81 GPU</span><small data-i18n-skip="">V100 / A100 / H100 / A6000 / RTX 4090 / RTX 3090</small></li>
+            </ul>
+          </li>
+          <li class="facility-tree-branch facility-tree-branch--spaces">
+            <a class="facility-tree-title" href="#facility-spaces"><span data-i18n-skip="">02</span><strong>场地</strong></a>
+            <ul>
+              <li><a href="#facility-beihang">北航城市沙盘</a><span data-i18n-skip="">100 m²</span><small>空地协同、导航与搜索</small></li>
+              <li><a href="#facility-partner">自所实验场地</a><span data-i18n-skip="">~200 m²</span><small>无人机与多机器人实验</small></li>
+              <li><a href="#facility-motion">动捕系统</a><span data-i18n-skip="">3</span><small>轨迹观测与虚实映射</small></li>
+              <li><a href="#facility-field">外场试验实景</a><small>无人机部署与地面协同</small></li>
+            </ul>
+          </li>
+          <li class="facility-tree-branch facility-tree-branch--videos">
+            <a class="facility-tree-title" href="#experimental-platforms"><span data-i18n-skip="">03</span><strong>视频</strong></a>
+            <ul>
+              <li><a href="#facility-video-coordination">空地协同与群体控制</a><small>虚实融合、无人机编队与沙盘任务</small></li>
+              <li><a href="#facility-video-navigation">视觉语言导航</a><span data-i18n-skip="">AERIS / VoLN-UAV</span></li>
+              <li><a href="#facility-video-manipulation">机器人操作与自主运动</a><small>双臂操作、协同导航、探索与四足控制</small></li>
+            </ul>
+          </li>
+        </ol>
+      </nav><dl class="facilities-stats">
+                <div><dt>机器人平台</dt><dd data-i18n-skip="">176</dd></div>
+                <div><dt>北京实验场地</dt><dd data-i18n-skip="">~300 m²</dd></div>
+                <div><dt>动捕系统</dt><dd data-i18n-skip="">3</dd></div>
+                <div><dt>GPU</dt><dd data-i18n-skip="">81</dd></div>
+              </dl><p class="facilities-note">统计包含北航与自所合作资源，依据团队介绍材料；合作资源不等同于课题组独立持有资源。</p></section><section class="facility-section facility-major" aria-labelledby="facility-hardware"><h3 class="facility-major-title"><span class="facility-number" data-i18n-skip="">01</span><span id="facility-hardware" tabindex="-1" data-section-anchor="">硬件种类与数量</span></h3><div class="facility-subsection" aria-labelledby="facility-robots">
+              <h4 id="facility-robots" tabindex="-1" data-section-anchor="">机器人平台</h4>
+              <h5 class="facility-category-title" id="facility-uavs" tabindex="-1" data-section-anchor="">无人机 · 140 架</h5>
               <div class="facility-photos">
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="AMOVLAB P230"><img src="assets/facilities/p230.webp" width="640" height="480" alt="AMOVLAB P230" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>AMOVLAB P230</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Bitcraze Crazyflie"><img src="assets/facilities/crazyflie.webp" width="640" height="480" alt="Bitcraze Crazyflie" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>Bitcraze Crazyflie</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Ryze Tello"><img src="assets/facilities/tello.webp" width="640" height="480" alt="Ryze Tello" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>Ryze Tello</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="AMOVLAB P230"><img src="assets/facilities/p230.webp" width="640" height="480" alt="AMOVLAB P230" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">AMOVLAB P230</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Bitcraze Crazyflie"><img src="assets/facilities/crazyflie.webp" width="640" height="480" alt="Bitcraze Crazyflie" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">Bitcraze Crazyflie</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Ryze Tello"><img src="assets/facilities/tello.webp" width="640" height="480" alt="Ryze Tello" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">Ryze Tello</figcaption></figure>
               </div>
               <div class="facility-table-wrap">
                 <table class="facility-table">
                   <thead><tr><th scope="col">平台</th><th scope="col">数量</th><th scope="col">实验用途</th></tr></thead>
                   <tbody>
-                    <tr><th scope="row" data-i18n-skip>AMOVLAB P230</th><td data-i18n-skip>20</td><td>机载视觉导航、轨迹跟踪与多机控制</td></tr>
-                    <tr><th scope="row" data-i18n-skip>Bitcraze Crazyflie</th><td data-i18n-skip>50</td><td>室内编队、轨迹与集群策略</td></tr>
-                    <tr><th scope="row" data-i18n-skip>Ryze Tello</th><td data-i18n-skip>20</td><td>轻量视觉与飞行编程</td></tr>
-                    <tr><th scope="row">自所补充无人机（多型号）</th><td data-i18n-skip>50</td><td>合作平台资源</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">AMOVLAB P230</th><td data-i18n-skip="">20</td><td>机载视觉导航、轨迹跟踪与多机控制</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">Bitcraze Crazyflie</th><td data-i18n-skip="">50</td><td>室内编队、轨迹与集群策略</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">Ryze Tello</th><td data-i18n-skip="">20</td><td>轻量视觉与飞行编程</td></tr>
+                    <tr><th scope="row">自所补充无人机（多型号）</th><td data-i18n-skip="">50</td><td>合作平台资源</td></tr>
                   </tbody>
                 </table>
               </div>
-              <h4>地面移动巡检 · 21 台</h4>
+              <h5 class="facility-category-title" id="facility-ground" tabindex="-1" data-section-anchor="">地面移动巡检 · 21 台</h5>
               <div class="facility-photos">
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="SCOUT MINI R&amp;D KIT"><img src="assets/facilities/scout-mini.webp" width="640" height="480" alt="SCOUT MINI R&amp;D KIT" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>SCOUT MINI R&amp;D KIT</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="LIMO"><img src="assets/facilities/limo.webp" width="640" height="480" alt="LIMO" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>LIMO</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Unitree Go2 EDU"><img src="assets/facilities/go2.webp" width="640" height="480" alt="Unitree Go2 EDU" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>Unitree Go2 EDU</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="SCOUT MINI R&amp;D KIT"><img src="assets/facilities/scout-mini.webp" width="640" height="480" alt="SCOUT MINI R&amp;D KIT" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">SCOUT MINI R&amp;D KIT</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="LIMO"><img src="assets/facilities/limo.webp" width="640" height="480" alt="LIMO" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">LIMO</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="Unitree Go2 EDU"><img src="assets/facilities/go2.webp" width="640" height="480" alt="Unitree Go2 EDU" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">Unitree Go2 EDU</figcaption></figure>
               </div>
               <div class="facility-table-wrap">
                 <table class="facility-table">
                   <thead><tr><th scope="col">平台</th><th scope="col">数量</th><th scope="col">实验用途</th></tr></thead>
                   <tbody>
-                    <tr><th scope="row" data-i18n-skip>SCOUT</th><td data-i18n-skip>3</td><td>导航与多车协同</td></tr>
-                    <tr><th scope="row" data-i18n-skip>SCOUT MINI R&amp;D KIT</th><td data-i18n-skip>1</td><td>室内外导航与路径规划</td></tr>
-                    <tr><th scope="row" data-i18n-skip>LIMO</th><td data-i18n-skip>9</td><td>多车导航与沙盘任务</td></tr>
-                    <tr><th scope="row" data-i18n-skip>YUHESEN FW-mid</th><td data-i18n-skip>3</td><td>横移与路径跟踪</td></tr>
-                    <tr><th scope="row" data-i18n-skip>Unitree Go2 EDU</th><td data-i18n-skip>5</td><td>四足导航、巡检与车狗协同；北航 3 台、自所 2 台</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">SCOUT</th><td data-i18n-skip="">3</td><td>导航与多车协同</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">SCOUT MINI R&amp;D KIT</th><td data-i18n-skip="">1</td><td>室内外导航与路径规划</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">LIMO</th><td data-i18n-skip="">9</td><td>多车导航与沙盘任务</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">YUHESEN FW-mid</th><td data-i18n-skip="">3</td><td>横移与路径跟踪</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">Unitree Go2 EDU</th><td data-i18n-skip="">5</td><td>四足导航、巡检与车狗协同；北航 3 台、自所 2 台</td></tr>
                   </tbody>
                 </table>
               </div>
-              <h4>移动机械臂 · 15 套</h4>
+              <h5 class="facility-category-title" id="facility-manipulation" tabindex="-1" data-section-anchor="">移动机械臂 · 15 套</h5>
               <div class="facility-photos">
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="TRACER + PiPER"><img src="assets/facilities/tracer-piper.webp" width="640" height="480" alt="TRACER + PiPER" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>TRACER + PiPER</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="LIMO COBOT"><img src="assets/facilities/limo-cobot.webp" width="640" height="480" alt="LIMO COBOT" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>LIMO COBOT</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="COBOT MAGIC"><img src="assets/facilities/cobot-magic.webp" width="640" height="480" alt="COBOT MAGIC" loading="lazy" decoding="async"></button><figcaption data-i18n-skip>COBOT MAGIC</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="TRACER + PiPER"><img src="assets/facilities/tracer-piper.webp" width="640" height="480" alt="TRACER + PiPER" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">TRACER + PiPER</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="LIMO COBOT"><img src="assets/facilities/limo-cobot.webp" width="640" height="480" alt="LIMO COBOT" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">LIMO COBOT</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="COBOT MAGIC"><img src="assets/facilities/cobot-magic.webp" width="640" height="480" alt="COBOT MAGIC" loading="lazy" decoding="async"></button><figcaption data-i18n-skip="">COBOT MAGIC</figcaption></figure>
               </div>
               <div class="facility-table-wrap">
                 <table class="facility-table">
                   <thead><tr><th scope="col">平台</th><th scope="col">数量</th><th scope="col">实验用途</th></tr></thead>
                   <tbody>
-                    <tr><th scope="row" data-i18n-skip>SCOUT + Manipulator</th><td data-i18n-skip>2</td><td>移动抓取与搬运</td></tr>
-                    <tr><th scope="row" data-i18n-skip>TRACER + PiPER</th><td data-i18n-skip>2</td><td>移动抓取与视觉导航操作</td></tr>
-                    <tr><th scope="row" data-i18n-skip>LIMO COBOT</th><td data-i18n-skip>10</td><td>抓放、转运与视觉示教；北航 5 套、自所 5 套</td></tr>
-                    <tr><th scope="row" data-i18n-skip>COBOT MAGIC</th><td data-i18n-skip>1</td><td>双臂遥操作、示教采集与模仿学习</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">SCOUT + Manipulator</th><td data-i18n-skip="">2</td><td>移动抓取与搬运</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">TRACER + PiPER</th><td data-i18n-skip="">2</td><td>移动抓取与视觉导航操作</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">LIMO COBOT</th><td data-i18n-skip="">10</td><td>抓放、转运与视觉示教；北航 5 套、自所 5 套</td></tr>
+                    <tr><th scope="row" data-i18n-skip="">COBOT MAGIC</th><td data-i18n-skip="">1</td><td>双臂遥操作、示教采集与模仿学习</td></tr>
                   </tbody>
                 </table>
               </div>
-            </section>
+            </div><details class="facility-background"><summary>更多平台实景</summary><div class="facility-photos facility-photos--existing"><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="无人机2"><img src="assets/images/img35.webp" alt="无人机2" decoding="async" loading="lazy"></button><figcaption>无人机</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="实验机器人"><img src="assets/images/img37.webp" alt="实验机器人" decoding="async" loading="lazy"></button><figcaption>机械臂</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="机器狗"><img src="assets/images/img38.webp" alt="机器狗" decoding="async" loading="lazy"></button><figcaption>机器狗</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="人形机器人"><img src="assets/images/img39.webp" alt="人形机器人" decoding="async" loading="lazy"></button><figcaption>人形机器人</figcaption></figure></div></details><div class="facility-subsection" aria-labelledby="facility-compute">
+              <h4 id="facility-compute" tabindex="-1" data-section-anchor="">计算资源</h4>
+              <p>共 81 张 GPU：本组 65 张，自所 16 张。</p><div class="facility-compute-layout"><div class="facility-table-wrap">
+                <table class="facility-table">
+                  <thead><tr><th scope="col">GPU 型号</th><th scope="col">本组</th><th scope="col">自所</th><th scope="col">合计</th></tr></thead>
+                  <tbody data-i18n-skip="">
+                    <tr><th scope="row">V100 32GB</th><td>2</td><td>0</td><td>2</td></tr>
+                    <tr><th scope="row">A100 40GB</th><td>10</td><td>0</td><td>10</td></tr>
+                    <tr><th scope="row">A100 80GB</th><td>5</td><td>0</td><td>5</td></tr>
+                    <tr><th scope="row">H100</th><td>9</td><td>0</td><td>9</td></tr>
+                    <tr><th scope="row">A6000 48GB</th><td>14</td><td>16</td><td>30</td></tr>
+                    <tr><th scope="row">RTX 4090 24GB</th><td>22</td><td>0</td><td>22</td></tr>
+                    <tr><th scope="row">RTX 3090 24GB</th><td>3</td><td>0</td><td>3</td></tr>
+                  </tbody>
+                  <tfoot><tr><th scope="row">合计</th><td data-i18n-skip="">65</td><td data-i18n-skip="">16</td><td data-i18n-skip="">81</td></tr></tfoot>
+                </table>
+              </div><div class="facility-photos"><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="算力集群" data-description="共 81 张 GPU：本组 65 张，自所 16 张。"><img src="assets/images/img34.webp" alt="算力集群" decoding="async" loading="lazy"></button><figcaption>算力集群</figcaption></figure></div></div>
 
-            <section class="facility-section" aria-labelledby="facility-spaces">
-              <h3 id="facility-spaces" tabindex="-1" data-section-anchor>实验场地与动捕</h3>
+              <p>支持感知模型、群体强化学习、导航与操作策略的训练、对照实验和真机部署迭代。</p>
+            </div></section><section class="facility-section facility-major" aria-labelledby="facility-spaces"><h3 class="facility-major-title"><span class="facility-number" data-i18n-skip="">02</span><span id="facility-spaces" tabindex="-1" data-section-anchor="">场地</span></h3>
+
               <p>北航北京 100 m²，自所约 200 m²。道路、建筑与目标区域构成可重复布置的沙盘环境，支持空地协同、导航、搜索及多机器人任务。</p>
               <div class="facility-photos facility-photos--spaces">
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="北航城市沙盘"><img src="assets/facilities/beihang-sandbox.webp" width="960" height="720" alt="北航城市沙盘" loading="lazy" decoding="async"></button><figcaption>北航城市沙盘</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="自所实验场地"><img src="assets/facilities/partner-spaces.webp" width="960" height="720" alt="自所实验场地" loading="lazy" decoding="async"></button><figcaption>自所实验场地</figcaption></figure>
-                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="运动捕捉设备"><img src="assets/facilities/motion-capture.webp" width="640" height="480" alt="运动捕捉设备" loading="lazy" decoding="async"></button><figcaption>运动捕捉设备</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="北航城市沙盘"><img src="assets/facilities/beihang-sandbox.webp" width="960" height="720" alt="北航城市沙盘" loading="lazy" decoding="async"></button><figcaption id="facility-beihang" tabindex="-1" data-section-anchor="">北航城市沙盘<span class="facility-site-area" data-i18n-skip="">100 m²</span></figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="自所实验场地"><img src="assets/facilities/partner-spaces.webp" width="960" height="720" alt="自所实验场地" loading="lazy" decoding="async"></button><figcaption id="facility-partner" tabindex="-1" data-section-anchor="">自所实验场地<span class="facility-site-area" data-i18n-skip="">~200 m²</span></figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="运动捕捉设备"><img src="assets/facilities/motion-capture.webp" width="640" height="480" alt="运动捕捉设备" loading="lazy" decoding="async"></button><figcaption id="facility-motion" tabindex="-1" data-section-anchor="">运动捕捉设备</figcaption></figure>
               </div>
               <p>3 套动捕系统提供位置与姿态观测，支持轨迹测量、协同控制及虚实坐标映射。</p>
-            </section>
-
-            <section class="facility-section" aria-labelledby="facility-software">
-              <h3 id="facility-software" tabindex="-1" data-section-anchor>仿真与真机软件</h3>
+            <details class="facility-background"><summary>更多场地实景</summary><div class="facility-photos"><figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="实验沙盘场地"><img src="assets/images/img36.webp" alt="实验沙盘场地" decoding="async" loading="lazy"></button><figcaption>实验场地</figcaption></figure></div></details>
+            <div class="facility-field"><h4><span id="facility-field" tabindex="-1" data-section-anchor="">外场试验实景</span></h4><div class="facility-field-grid"><article class="demo-card platform-card" data-platform="field">
+                  <button class="platform-cover image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机集群部署" data-description="外场试验中准备就位的无人机集群。" aria-label="查看外场试验无人机集群部署照片">
+                    <img class="demo-poster" src="assets/platforms/field-uav-deployment-clean.webp" alt="外场试验场地上排列就位的无人机集群" width="640" height="360" loading="lazy" decoding="async"><span class="demo-duration">4 张实景</span>
+                  </button>
+                  <h4>空地异构集群外场试验平台</h4><p>无人机集群部署、无人车实物与机群返场</p>
+                  <div class="platform-stills" aria-label="外场试验实物照片">
+                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机地面阵列" data-description="地面视角下的无人机阵列与外场试验环境。" aria-label="查看无人机地面阵列照片" title="无人机地面阵列"><img src="assets/platforms/field-uav-lineup-clean.webp" alt="地面视角下的无人机阵列" width="640" height="360" loading="lazy" decoding="async"></button>
+                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人车协同试验" data-description="外场试验中参与协同任务的地面无人车。" aria-label="查看无人车协同试验照片" title="无人车协同试验"><img src="assets/platforms/field-ground-vehicles-clean.webp" alt="外场试验中的多台地面无人车" width="640" height="360" loading="lazy" decoding="async"></button>
+                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 机群降落返场" data-description="试验结束后无人机集群降落、返回地面场地的画面。" aria-label="查看机群降落返场照片" title="机群降落返场"><img src="assets/platforms/field-uav-return-clean.webp" alt="无人机集群降落返场" width="640" height="360" loading="lazy" decoding="async"></button>
+                  </div>
+                </article></div></div></section><section aria-labelledby="experimental-platforms" class="facility-section facility-major"><h3 class="facility-major-title"><span class="facility-number" data-i18n-skip="">03</span><span id="experimental-platforms" tabindex="-1" data-section-anchor="">视频</span></h3><div class="facility-video-group"><h4 id="facility-video-coordination" tabindex="-1" data-section-anchor="">空地协同与群体控制</h4><div class="demo-grid"><article class="demo-card platform-card" data-platform="hybrid">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/air-ground-hybrid.mp4" data-demo-title="空地协同虚实融合验证平台" data-demo-description="融合三维仿真、集群状态可视化与室内实物场景，展示空地协同任务的虚实结合验证过程。" aria-label="播放空地协同虚实融合验证平台视频，3 分 53 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/air-ground-hybrid-clean.webp" alt="空地协同任务的三维仿真界面与室内实物场景" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">03:53</span>
+                  </button>
+                  <h4>空地协同虚实融合验证平台</h4><p>目标搜索、协同打击、空地护送三阶段任务，仿真集群与实物集群同步验证</p>
+                </article><article class="demo-card platform-card" data-platform="control">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">01:43</span>
+                  </button>
+                  <h4>多智能体协同控制实验平台</h4><p>多智能体仿真与室内无人机编队协同实验</p>
+                </article><article class="demo-card platform-card" data-platform="urban-sandbox">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/urban-sandbox-air-ground.mp4" data-demo-title="城市沙盘空地协同实验平台" data-demo-description="在包含道路、建筑与山地模型的室内城市沙盘中，展示无人机飞行与地面车辆运行，为空地协同任务提供实物实验环境。" aria-label="播放城市沙盘空地协同实验平台视频，2 分 2 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/urban-sandbox-air-ground.webp" alt="室内城市沙盘中的无人机、地面车辆与道路建筑模型" width="480" height="272" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:02</span>
+                  </button>
+                  <h4>城市沙盘空地协同实验平台</h4><p>城市道路与建筑沙盘中的无人机、地面车辆实验</p>
+                </article></div></div><div class="facility-video-group"><h4 id="facility-video-navigation" tabindex="-1" data-section-anchor="">视觉语言导航</h4><div class="demo-grid"><article class="demo-card">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/open-source/uav-navigation-swarm-clean.webp" alt="无人机在室内沙盘场地进行飞行实验" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:05</span>
+                  </button>
+                  <h4>无人机导航与群体协同实验</h4><p>AERIS 语言模型编排的多机协同：视觉语言导航与室内多机实飞</p>
+                </article><article class="demo-card">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/voln-sim-real.mp4" data-demo-title="VoLN-UAV · 仿真与实飞" data-demo-description="VoLN-UAV 官方演示：先为仿真环境中的第一视角长程导航，再为室内城市沙盘实飞。未见场景测试集成功率 7.4% / 4.5% / 1.8%（易 / 中 / 难），约为最强基线的 3 倍，长程导航仍有较大挑战。" aria-label="播放 VoLN-UAV 仿真与实飞演示，14 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/open-source/voln-sim-real.webp" alt="VoLN-UAV 在室内城市沙盘中的实飞画面" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">00:14</span>
+                  </button>
+                  <h4>VoLN-UAV · 仿真与实飞</h4><p>纯视觉长程导航：仿真第一视角 + 室内沙盘实飞，<a href="https://admire-ljb.github.io/VoLN-UAV/#demo" target="_blank" rel="noopener noreferrer">项目主页</a></p>
+                </article></div></div><div class="facility-video-group"><h4 id="facility-video-manipulation" tabindex="-1" data-section-anchor="">机器人操作与自主运动</h4><div class="demo-grid"><article class="demo-card platform-card" data-platform="robotics">
+                  <button class="demo-trigger" type="button" data-demo-group="robotics" data-demo-title="具身智能与机器人实验平台" aria-label="查看具身智能与机器人实验平台，4 段实验视频" aria-haspopup="dialog" aria-controls="demo-dialog">
+                    <img class="demo-poster" src="assets/platforms/dual-arm-manipulation.webp" alt="双臂机器人在桌面场景中抓取和放置物体" width="960" height="540" loading="lazy" decoding="async">
+                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">4 段演示</span>
+                  </button>
+                  <h4>具身智能与机器人实验平台</h4><p>双臂操作、协同导航、自主探索与四足运动控制</p>
+                </article></div></div><details class="facility-background"><summary>软件基础与研究方向</summary><div class="facility-subsection" aria-labelledby="facility-software">
+              <h4 id="facility-software" tabindex="-1" data-section-anchor="">仿真与真机软件</h4>
               <div class="facility-software">
                 <div>
                   <h4>已有基础</h4>
@@ -3655,94 +3712,10 @@
                   <p>Isaac Sim / Isaac Lab 链路处于建设阶段，覆盖建模、统一观测、协作策略训练、扰动验证、ROS 2 真机部署和评测反馈；复用平台成熟的底层控制器。</p>
                 </div>
               </div>
-            </section>
-
-            <section class="facility-section" aria-labelledby="facility-compute">
-              <h3 id="facility-compute" tabindex="-1" data-section-anchor>计算资源</h3>
-              <p>40 台服务器与工作站、81 张 GPU：本组 38 台 / 65 张，自所 2 台八卡 A6000 服务器 / 16 张。</p>
-              <div class="facility-table-wrap">
-                <table class="facility-table">
-                  <thead><tr><th scope="col">GPU 型号</th><th scope="col">本组</th><th scope="col">自所</th><th scope="col">合计</th></tr></thead>
-                  <tbody data-i18n-skip>
-                    <tr><th scope="row">V100 32GB</th><td>2</td><td>0</td><td>2</td></tr>
-                    <tr><th scope="row">A100 40GB</th><td>10</td><td>0</td><td>10</td></tr>
-                    <tr><th scope="row">A100 80GB</th><td>5</td><td>0</td><td>5</td></tr>
-                    <tr><th scope="row">H100</th><td>9</td><td>0</td><td>9</td></tr>
-                    <tr><th scope="row">A6000 48GB</th><td>14</td><td>16</td><td>30</td></tr>
-                    <tr><th scope="row">RTX 4090 24GB</th><td>22</td><td>0</td><td>22</td></tr>
-                    <tr><th scope="row">RTX 3090 24GB</th><td>3</td><td>0</td><td>3</td></tr>
-                  </tbody>
-                  <tfoot><tr><th scope="row">合计</th><td data-i18n-skip>65</td><td data-i18n-skip>16</td><td data-i18n-skip>81</td></tr></tfoot>
-                </table>
-              </div>
-              <p>支持感知模型、群体强化学习、导航与操作策略的训练、对照实验和真机部署迭代。</p>
-            </section>
-
-            <section class="facility-section" aria-labelledby="facility-tasks">
-              <h3 id="facility-tasks" tabindex="-1" data-section-anchor>场景与合作任务</h3>
+            </div><div class="facility-subsection" aria-labelledby="facility-tasks">
+              <h4 id="facility-tasks" tabindex="-1" data-section-anchor="">场景与合作任务</h4>
               <p>已有方法包括知识增强视觉问答、三维目标检测、语言导航与多智能体学习。后续合作面向协同感知、主动探索、跨区域巡检、移动操作及长时序协作，具体任务与评测方案共同定义。</p>
-            </section>
-
-            <section aria-labelledby="experimental-platforms">
-              <div class="demo-heading"><h3 id="experimental-platforms" tabindex="-1" data-section-anchor>实验平台</h3><span>虚实融合、群体协同、机器人操作与外场实景</span></div>
-              <div class="demo-grid">
-                <article class="demo-card platform-card" data-platform="hybrid">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/air-ground-hybrid.mp4" data-demo-title="空地协同虚实融合验证平台" data-demo-description="融合三维仿真、集群状态可视化与室内实物场景，展示空地协同任务的虚实结合验证过程。" aria-label="播放空地协同虚实融合验证平台视频，3 分 53 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                    <img class="demo-poster" src="assets/platforms/air-ground-hybrid-clean.webp" alt="空地协同任务的三维仿真界面与室内实物场景" width="960" height="540" loading="lazy" decoding="async">
-                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">03:53</span>
-                  </button>
-                  <h4>空地协同虚实融合验证平台</h4><p>目标搜索、协同打击、空地护送三阶段任务，仿真集群与实物集群同步验证</p>
-                </article>
-                <article class="demo-card platform-card" data-platform="control">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                    <img class="demo-poster" src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
-                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">01:43</span>
-                  </button>
-                  <h4>多智能体协同控制实验平台</h4><p>多智能体仿真与室内无人机编队协同实验</p>
-                </article>
-                <article class="demo-card platform-card" data-platform="urban-sandbox">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/urban-sandbox-air-ground.mp4" data-demo-title="城市沙盘空地协同实验平台" data-demo-description="在包含道路、建筑与山地模型的室内城市沙盘中，展示无人机飞行与地面车辆运行，为空地协同任务提供实物实验环境。" aria-label="播放城市沙盘空地协同实验平台视频，2 分 2 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                    <img class="demo-poster" src="assets/platforms/urban-sandbox-air-ground.webp" alt="室内城市沙盘中的无人机、地面车辆与道路建筑模型" width="480" height="272" loading="lazy" decoding="async">
-                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:02</span>
-                  </button>
-                  <h4>城市沙盘空地协同实验平台</h4><p>城市道路与建筑沙盘中的无人机、地面车辆实验</p>
-                </article>
-                <article class="demo-card platform-card" data-platform="robotics">
-                  <button class="demo-trigger" type="button" data-demo-group="robotics" data-demo-title="具身智能与机器人实验平台" aria-label="查看具身智能与机器人实验平台，4 段实验视频" aria-haspopup="dialog" aria-controls="demo-dialog">
-                    <img class="demo-poster" src="assets/platforms/dual-arm-manipulation.webp" alt="双臂机器人在桌面场景中抓取和放置物体" width="960" height="540" loading="lazy" decoding="async">
-                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">4 段演示</span>
-                  </button>
-                  <h4>具身智能与机器人实验平台</h4><p>双臂操作、协同导航、自主探索与四足运动控制</p>
-                </article>
-                <article class="demo-card platform-card" data-platform="field">
-                  <button class="platform-cover image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机集群部署" data-description="外场试验中准备就位的无人机集群。" aria-label="查看外场试验无人机集群部署照片">
-                    <img class="demo-poster" src="assets/platforms/field-uav-deployment-clean.webp" alt="外场试验场地上排列就位的无人机集群" width="640" height="360" loading="lazy" decoding="async"><span class="demo-duration">4 张实景</span>
-                  </button>
-                  <h4>空地异构集群外场试验平台</h4><p>无人机集群部署、无人车实物与机群返场</p>
-                  <div class="platform-stills" aria-label="外场试验实物照片">
-                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人机地面阵列" data-description="地面视角下的无人机阵列与外场试验环境。" aria-label="查看无人机地面阵列照片" title="无人机地面阵列"><img src="assets/platforms/field-uav-lineup-clean.webp" alt="地面视角下的无人机阵列" width="640" height="360" loading="lazy" decoding="async"></button>
-                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 无人车协同试验" data-description="外场试验中参与协同任务的地面无人车。" aria-label="查看无人车协同试验照片" title="无人车协同试验"><img src="assets/platforms/field-ground-vehicles-clean.webp" alt="外场试验中的多台地面无人车" width="640" height="360" loading="lazy" decoding="async"></button>
-                    <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="空地异构集群外场试验平台 · 机群降落返场" data-description="试验结束后无人机集群降落、返回地面场地的画面。" aria-label="查看机群降落返场照片" title="机群降落返场"><img src="assets/platforms/field-uav-return-clean.webp" alt="无人机集群降落返场" width="640" height="360" loading="lazy" decoding="async"></button>
-                  </div>
-                </article>
-                <article class="demo-card">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                    <img class="demo-poster" src="assets/open-source/uav-navigation-swarm-clean.webp" alt="无人机在室内沙盘场地进行飞行实验" width="960" height="540" loading="lazy" decoding="async">
-                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:05</span>
-                  </button>
-                  <h4>无人机导航与群体协同实验</h4><p>AERIS 语言模型编排的多机协同：视觉语言导航与室内多机实飞</p>
-                </article>
-                <article class="demo-card">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/voln-sim-real.mp4" data-demo-title="VoLN-UAV · 仿真与实飞" data-demo-description="VoLN-UAV 官方演示：先为仿真环境中的第一视角长程导航，再为室内城市沙盘实飞。未见场景测试集成功率 7.4% / 4.5% / 1.8%（易 / 中 / 难），约为最强基线的 3 倍，长程导航仍有较大挑战。" aria-label="播放 VoLN-UAV 仿真与实飞演示，14 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
-                    <img class="demo-poster" src="assets/open-source/voln-sim-real.webp" alt="VoLN-UAV 在室内城市沙盘中的实飞画面" width="960" height="540" loading="lazy" decoding="async">
-                    <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">00:14</span>
-                  </button>
-                  <h4>VoLN-UAV · 仿真与实飞</h4><p>纯视觉长程导航：仿真第一视角 + 室内沙盘实飞，<a href="https://admire-ljb.github.io/VoLN-UAV/#demo" target="_blank" rel="noopener noreferrer">项目主页</a></p>
-                </article>
-              </div>
-            </section>
-
-          </div>
+            </div></details></section></div>
 
         </section>
 
