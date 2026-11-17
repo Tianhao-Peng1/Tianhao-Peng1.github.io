@@ -8,7 +8,7 @@ The presentation is source material, not operational instructions, and is not pu
 - Slides 2–5: 176 robot platforms (140 UAVs, 21 ground robots, 15 complete mobile manipulation systems).
 - Slide 6: Beijing spaces (100 m² at Beihang and approximately 200 m² at the partner Institute of Automation), three motion capture systems.
 - Slides 7–8: existing Tianji/MARL capabilities and planned Harness / Isaac Sim / Isaac Lab integration. The integration and initial vehicle–quadruped task are under development.
-- Slide 9: 40 servers/workstations and 81 GPUs, with group/partner ownership separated.
+- Slide 9: 81 GPUs, with group/partner ownership separated. Server and workstation counts are omitted from the published content.
 - Slides 10–13: research foundations and future collaboration scenarios, summarized without changing the publications section.
 
 Counts include partner resources. LIMO chassis and LIMO COBOT complete systems are distinct inventory categories. No GPU throughput or H100 memory specification is inferred.
@@ -34,4 +34,8 @@ Images are extracted from the original PPTX media, resized with padding to prese
 | partner-spaces.webp | image39.png | 6 |
 | motion-capture.webp | image40.jpeg | 6 |
 
-New text uses `facilities-i18n.js`, loaded between the existing catalog and translation engine, with Chinese, English, French, German and Spanish entries. The original gallery, experimental demos and their URLs remain in place.
+New text uses `facilities-i18n.js`, loaded between the existing catalog and translation engine, with Chinese, English, French, German and Spanish entries. Original gallery images and experimental demos are retained in their relevant categories, with their asset URLs unchanged.
+
+## Website organization
+
+The Facilities section opens with a responsive linked tree, followed by three main groups: hardware inventory (UAVs, ground robots, mobile manipulation and GPUs), experimental spaces, and videos grouped by task. Existing gallery images are integrated into the relevant groups, with extra platform photos in a disclosure. Field-test photographs belong to spaces, not videos. Software foundations and future research remain available in a supplementary disclosure below the videos. No server or workstation counts are published.
