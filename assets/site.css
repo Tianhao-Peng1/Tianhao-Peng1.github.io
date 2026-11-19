@@ -576,7 +576,7 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .exchange-photo-grid .exchange-photo--venue { object-position: center bottom; }
 
 .pagefoot { grid-area: footer; padding-block: 20px; border-top: 1px solid var(--line); color: var(--muted); }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-inner { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 12px; }
 .footer-inner strong { color: var(--deep-blue); }
 
 body:has(dialog[open]) { overflow: hidden; }
