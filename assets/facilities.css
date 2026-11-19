@@ -1,33 +1,14 @@
 .facilities-overview { margin: 24px 0; }
+.facility-overview-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 14px; }
+.facility-overview-link { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 15px 4px; border-bottom: 2px solid var(--blue-ink); color: var(--blue-ink); text-decoration: none; font-size: 14px; line-height: 20px; }
+.facility-overview-link > span { color: var(--muted); font-size: 12px; }
+.facility-overview-link strong { font-weight: 600; }
+.facility-overview-link svg { width: 16px; height: 16px; margin-left: auto; flex-shrink: 0; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.facility-overview-link:hover { background: var(--ice); }
+.facility-overview-link:focus-visible { outline: 2px solid var(--blue-ink); outline-offset: 4px; }
 #resources { letter-spacing: 0; }
 #resources h3, #resources h4, #resources h5 { letter-spacing: 0; }
-.facility-tree { margin: 22px 0 24px; }
-.facility-tree-root { width: fit-content; max-width: 100%; margin: auto; padding: 9px 20px; background: var(--blue-ink); color: white; font-weight: 600; text-align: center; overflow-wrap: anywhere; }
-.facility-tree-branches { position: relative; display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 28px; padding: 26px 0 0; margin: 0; list-style: none; }
-.facility-tree-branches::before { content: ''; position: absolute; top: 0; left: 50%; height: 13px; border-left: 1px solid #a8b2bb; }
-.facility-tree-branch { --branch-color: #005bac; position: relative; min-width: 0; margin: 0; }
-.facility-tree-branch--spaces { --branch-color: #237965; }
-.facility-tree-branch--videos { --branch-color: #a04453; }
-.facility-tree-branch::before { content: ''; position: absolute; top: -13px; left: -14px; right: -14px; height: 13px; border-top: 1px solid #a8b2bb; }
-.facility-tree-branch:first-child::before { left: 50%; }
-.facility-tree-branch:last-child::before { right: 50%; }
-.facility-tree-title { display: flex; align-items: baseline; justify-content: center; gap: 10px; position: relative; border-bottom: 2px solid var(--branch-color); padding: 10px 3px; color: var(--branch-color); text-align: center; text-decoration: none; }
-.facility-tree-title::before { content: ''; position: absolute; top: -13px; left: 50%; height: 13px; border-left: 1px solid #a8b2bb; }
-.facility-tree-title > span { font-size: 12px; }
-.facility-tree-branch > ul { list-style: none; margin: 14px 0 0 8px; padding: 0 0 0 15px; border-left: 1px solid var(--line); }
-.facility-tree-branch > ul > li { position: relative; margin: 0; padding: 0 0 16px; min-width: 0; }
-.facility-tree-branch > ul > li::before { content: ''; position: absolute; top: 10px; left: -15px; width: 10px; border-top: 1px solid var(--line); }
-.facility-tree-branch > ul > li:last-child { padding-bottom: 0; }
-.facility-tree-branch > ul > li > a { display: block; color: var(--branch-color); font-weight: 600; font-size: 13px; line-height: 20px; overflow-wrap: anywhere; }
-.facility-tree-branch > ul > li > span, .facility-tree-branch small { display: block; color: var(--muted); font-size: 12px; line-height: 19px; margin-top: 3px; overflow-wrap: anywhere; }
-.facility-tree a:hover { text-decoration: underline; }
-.facility-tree a:focus-visible { outline: 2px solid var(--branch-color); outline-offset: 3px; }
-.facilities-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); }
-.facilities-stats > div { padding: 16px 10px; }
-.facilities-stats dt { color: var(--muted); }
-.facilities-stats dd { margin: 5px 0 0; font-size: 24px; line-height: 30px; color: var(--blue-ink); }
 .facilities-note { margin-top: 12px; color: var(--muted); }
-.facilities-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .facility-section { margin-top: 30px; }
 .facility-major { margin-top: 38px; padding-top: 22px; border-top: 1px solid var(--line); }
 .facility-major-title { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; }
@@ -66,28 +47,13 @@
 .facility-software { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .facility-software h4 { margin-top: 10px; }
 .facility-software p + p { margin-top: 10px; }
-@media (max-width: 900px) {
-  .facility-tree-branches { gap: 18px; grid-template-columns: 1.2fr 1fr 1fr; }
-  .facility-tree-title { align-items: start; text-align: left; }
-  .facility-tree-branch::before { left: -9px; right: -9px; }
-  .facility-tree-branch:first-child::before { left: 50%; }
-  .facility-tree-branch:last-child::before { right: 50%; }
-}
 @media (max-width: 640px) {
-  .facility-tree-root { margin: 0; }
-  .facility-tree-branches { display: block; margin-left: 12px; border-left: 1px solid #a8b2bb; padding: 4px 0 0 16px; }
-  .facility-tree-branches::before, .facility-tree-title::before { display: none; }
-  .facility-tree-branch { margin-top: 16px; }
-  .facility-tree-branch::before, .facility-tree-branch:first-child::before, .facility-tree-branch:last-child::before { top: 21px; left: -16px; right: auto; width: 16px; height: 0; }
-  .facility-tree-title { justify-content: start; text-align: left; }
-  .facilities-stats { grid-template-columns: minmax(0, 1fr); }
-  .facilities-stats > div { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .facilities-stats dd { flex-shrink: 0; margin: 0; }
+  .facility-overview-nav { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .facility-overview-link { padding: 12px 4px; border-bottom-width: 1px; }
   .facility-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .facility-photos--existing { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .facility-photos--spaces, .facility-field-grid { grid-template-columns: minmax(0, 1fr); }
   #resources .demo-grid, .facility-video-group:last-of-type .demo-grid { grid-template-columns: minmax(0, 1fr); }
-  .facility-tree-branch > ul > li { padding-bottom: 14px; }
   .facility-software { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .facility-table th, .facility-table td { padding: 8px 6px; overflow-wrap: anywhere; }
 }
