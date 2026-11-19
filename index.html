@@ -38,8 +38,10 @@
 
   <link rel="stylesheet" href="assets/site.css?v=20261115-navigation">
   <link rel="stylesheet" href="assets/facilities.css?v=20261119-overview">
+  <link rel="stylesheet" href="assets/facilities-research.css?v=20261119-ppt">
   <script src="assets/i18n/catalog.js?v=20261119-facilities" defer></script>
   <script src="assets/facilities-i18n.js?v=20261119-overview" defer></script>
+  <script src="assets/facilities-research-i18n.js?v=20261119-ppt" defer></script>
   <script src="assets/site.js?v=20261115-navigation" defer></script>
   <script src="assets/i18n.js?v=20261114-roster" defer></script>
   <script src="assets/project-demos.js?v=20261113-figures" defer></script>
@@ -3633,7 +3635,56 @@
                   </tbody>
                 </table>
               </div>
-            </div><details class="facility-background"><summary>更多平台实景</summary><div class="facility-photos facility-photos--existing"><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="无人机2"><img src="assets/images/img35.webp" alt="无人机2" decoding="async" loading="lazy"></button><figcaption>无人机</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="实验机器人"><img src="assets/images/img37.webp" alt="实验机器人" decoding="async" loading="lazy"></button><figcaption>机械臂</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="机器狗"><img src="assets/images/img38.webp" alt="机器狗" decoding="async" loading="lazy"></button><figcaption>机器狗</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="人形机器人"><img src="assets/images/img39.webp" alt="人形机器人" decoding="async" loading="lazy"></button><figcaption>人形机器人</figcaption></figure></div></details><p class="facilities-note">统计包含北航与合作团队资源，依据团队介绍材料；合作团队资源不等同于课题组独立持有资源。</p></section><section class="facility-section facility-major" aria-labelledby="facility-spaces"><h3 class="facility-major-title"><span class="facility-number" data-i18n-skip="">02</span><span id="facility-spaces" tabindex="-1" data-section-anchor="">场地</span></h3>
+            </div>
+            <div class="facility-research" id="facility-cockpit" aria-labelledby="facility-cockpit-title">
+              <h4 id="facility-cockpit-title" tabindex="-1" data-section-anchor>智能座舱与多模态人因实验平台</h4>
+              <p class="facilities-note">北工大平台，依托具身交互智能北京市重点实验室；以下设备单独展示，不计入上方机器人数量。</p>
+              <div class="facility-research-layout">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="CARLA 三屏智能座舱"><img src="assets/facilities/research/carla-cockpit.webp" alt="CARLA 三屏智能座舱" width="1200" height="900" loading="lazy" decoding="async"></button><figcaption>CARLA 三屏智能座舱</figcaption></figure>
+                <div>
+                  <p>以 CARLA 仿真器为核心，三屏呈现道路、环视与后视影像、仪表盘和任务界面，通过方向盘开展模拟驾驶实验。</p>
+                  <dl class="facility-specs">
+                    <dt>同步感知</dt><dd>摄像头、麦克风与脑电传感器同步记录视觉行为、语音交互和生理信号。</dd>
+                    <dt>舒适性研究</dt><dd>融合面部表情与脑电特征，研究个性化驾驶风格匹配。</dd>
+                    <dt>安全性研究</dt><dd>分析驾驶状态与脑区活动，研究注意力分散和疲劳驾驶提醒。</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="facility-research" id="facility-eeg" aria-labelledby="facility-eeg-title">
+              <h4 id="facility-eeg-title" tabindex="-1" data-section-anchor>脑电采集与 OpenBCI 分析</h4>
+              <div class="facility-research-layout">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="脑电佩戴与采集场景"><img src="assets/facilities/research/openbci-eeg.webp" alt="脑电佩戴与采集场景" width="900" height="1200" loading="lazy" decoding="async"></button><figcaption>脑电佩戴与采集场景</figcaption></figure>
+                <div>
+                  <p>电极帽连接 OpenBCI Cyton 生物电放大器，经 USB 接收器将数字化信号无线传入 OpenBCI GUI，实时显示并按会话记录。</p>
+                  <dl class="facility-specs">
+                    <dt>采集与互联</dt><dd>支持 CSV、BDF+ 导出，以及 LSL、UDP、OSC 串流，便于后续分析与平台互联。</dd>
+                    <dt>状态可视化</dt><dd>专注与放松度评估、脑区拓扑活动热图。</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="facility-research" id="facility-gimbal" aria-labelledby="facility-gimbal-title">
+              <h4 id="facility-gimbal-title" tabindex="-1" data-section-anchor>三光智能吊舱与输电线路巡检</h4>
+              <p>依托国家电网总部科技项目，研制面向双飞翼垂直起降无人机的智能吊舱，开展机载 AI 边缘识别与高速巡航稳定成像。</p>
+              <div class="facility-photos facility-research-photos">
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="三光吊舱与控制设备"><img src="assets/facilities/research/gimbal-hardware.webp" alt="三光吊舱与控制设备" width="1200" height="900" loading="lazy" decoding="async"></button><figcaption>三光吊舱与控制设备</figcaption></figure>
+                <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="2025 长春航空展搭载展示"><img src="assets/facilities/research/gimbal-airshow.webp" alt="2025 长春航空展搭载展示" width="1200" height="800" loading="lazy" decoding="async"></button><figcaption>2025 长春航空展搭载展示</figcaption></figure>
+              </div>
+              <dl class="facility-specs">
+                <dt>融合识别</dt><dd>可见光与红外特征匹配，结合四阶段数据增强和递归注意力头边缘识别算法。</dd>
+                <dt>稳定成像</dt><dd>机载前端 AI 边缘处理与 AI 伺服控制，支持高速巡航下的线路巡检拍摄。</dd>
+                <dt>检测与分析</dt><dd>数字孪生平台展示缺陷检测结果、统计与空间位置，接入讯飞星火大模型生成检测报告并提供对话问答。</dd>
+              </dl>
+              <details class="facility-background"><summary>算法与工程成果</summary>
+                <p>吊舱搭载合作单位双飞翼无人机亮相 2025 年长春航空展。成果材料列示 CNAS/CMA 相关认证信息、中国发明协会发明创业成果二等奖，以及论文、专利和软件著作权成果。</p>
+                <div class="facility-photos facility-research-photos">
+                  <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="四阶段数据增强与融合识别流程"><img src="assets/facilities/research/gimbal-algorithm.webp" alt="四阶段数据增强与融合识别流程" width="1200" height="700" loading="lazy" decoding="async"></button><figcaption>四阶段数据增强与融合识别流程</figcaption></figure>
+                  <figure><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="可见光与红外特征匹配"><img src="assets/facilities/research/gimbal-matching.webp" alt="可见光与红外特征匹配" width="1200" height="650" loading="lazy" decoding="async"></button><figcaption>可见光与红外特征匹配</figcaption></figure>
+                </div>
+              </details>
+            </div>
+<details class="facility-background"><summary>更多平台实景</summary><div class="facility-photos facility-photos--existing"><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="无人机2"><img src="assets/images/img35.webp" alt="无人机2" decoding="async" loading="lazy"></button><figcaption>无人机</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="实验机器人"><img src="assets/images/img37.webp" alt="实验机器人" decoding="async" loading="lazy"></button><figcaption>机械臂</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="机器狗"><img src="assets/images/img38.webp" alt="机器狗" decoding="async" loading="lazy"></button><figcaption>机器狗</figcaption></figure><figure class=""><button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="人形机器人"><img src="assets/images/img39.webp" alt="人形机器人" decoding="async" loading="lazy"></button><figcaption>人形机器人</figcaption></figure></div></details><p class="facilities-note">统计包含北航与合作团队资源，依据团队介绍材料；合作团队资源不等同于课题组独立持有资源。</p></section><section class="facility-section facility-major" aria-labelledby="facility-spaces"><h3 class="facility-major-title"><span class="facility-number" data-i18n-skip="">02</span><span id="facility-spaces" tabindex="-1" data-section-anchor="">场地</span></h3>
 
               <p>北航北京 100 m²，合作团队约 200 m²，合计约 300 m²。道路、建筑与目标区域构成可重复布置的沙盘环境，支持空地协同、导航、搜索及多机器人任务。</p>
               <div class="facility-photos facility-photos--spaces">
@@ -3689,7 +3740,18 @@
                     <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">4 段演示</span>
                   </button>
                   <h4>具身智能与机器人实验平台</h4><p>双臂操作、协同导航、自主探索与四足运动控制</p>
-                </article></div></div><details class="facility-background"><summary>软件基础与研究方向</summary><div class="facility-subsection" aria-labelledby="facility-software">
+                </article></div></div>            <div class="facility-video-group facility-gimbal-demos" aria-labelledby="facility-video-gimbal">
+              <h4 id="facility-video-gimbal" tabindex="-1" data-section-anchor>吊舱与线路巡检动态演示</h4>
+              <div class="demo-grid">
+                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/gimbal-stabilization.webp" data-title="吊舱稳定控制" data-description="吊舱硬件与稳定控制动态展示。"><img class="demo-poster" src="assets/facilities/research/gimbal-stabilization-poster.webp" alt="吊舱稳定控制" width="400" height="533" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>吊舱稳定控制</h5><p>吊舱硬件与稳定控制动态展示。</p></article>
+                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/line-inspection.webp" data-title="可见光与红外巡检" data-description="巡航拍摄中的可见光、红外画面与目标检测。"><img class="demo-poster" src="assets/facilities/research/line-inspection-poster.webp" alt="可见光与红外巡检" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>可见光与红外巡检</h5><p>巡航拍摄中的可见光、红外画面与目标检测。</p></article>
+                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/defect-detection.webp" data-title="输电线路缺陷检测" data-description="巡检平台的检测任务配置与结果展示。"><img class="demo-poster" src="assets/facilities/research/defect-detection-poster.webp" alt="输电线路缺陷检测" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>输电线路缺陷检测</h5><p>巡检平台的检测任务配置与结果展示。</p></article>
+                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/inspection-statistics.webp" data-title="检测统计与可视化" data-description="检测数据汇总、图表统计与可视化分析。"><img class="demo-poster" src="assets/facilities/research/inspection-statistics-poster.webp" alt="检测统计与可视化" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>检测统计与可视化</h5><p>检测数据汇总、图表统计与可视化分析。</p></article>
+                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/inspection-assistant.webp" data-title="巡检 AI 助手" data-description="结合检测结果、地图展示与对话交互。"><img class="demo-poster" src="assets/facilities/research/inspection-assistant-poster.webp" alt="巡检 AI 助手" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>巡检 AI 助手</h5><p>结合检测结果、地图展示与对话交互。</p></article>
+                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/inspection-report.webp" data-title="AI 检测报告" data-description="基于检测数据生成线路巡检分析报告。"><img class="demo-poster" src="assets/facilities/research/inspection-report-poster.webp" alt="AI 检测报告" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>AI 检测报告</h5><p>基于检测数据生成线路巡检分析报告。</p></article>
+              </div>
+            </div>
+<details class="facility-background"><summary>软件基础与研究方向</summary><div class="facility-subsection" aria-labelledby="facility-software">
               <h4 id="facility-software" tabindex="-1" data-section-anchor="">仿真与真机软件</h4>
               <div class="facility-software">
                 <div>

@@ -1,0 +1,25 @@
+#resources .facility-research { margin-top: 32px; padding-top: 10px; border-top: 1px solid var(--line); }
+#resources .facility-research-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 24px; align-items: start; margin-top: 16px; }
+#resources .facility-research figure { min-width: 0; margin: 0; }
+#resources .facility-research .image-open { display: block; width: 100%; padding: 0; border: 0; background: var(--ice); cursor: zoom-in; }
+#resources .facility-research-layout img { display: block; width: 100%; height: 280px; object-fit: contain; }
+#resources .facility-research figcaption { margin-top: 7px; color: var(--muted); }
+#resources .facility-research-layout p { margin: 0 0 12px; }
+#resources .facility-specs { display: grid; grid-template-columns: minmax(90px, .3fr) minmax(0, 1fr); margin: 12px 0; gap: 12px 18px; }
+#resources .facility-specs dt { font-weight: 600; color: var(--blue-ink); }
+#resources .facility-specs dd { margin: 0; overflow-wrap: anywhere; }
+#resources .facility-research-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#resources .facility-research-photos img { height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+#resources .facility-gimbal-demos .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#resources .facility-gimbal-demos .demo-poster { object-fit: contain; background: var(--ice); }
+#resources .facility-motion-trigger { position: relative; display: block; width: 100%; padding: 0; border: 0; cursor: pointer; }
+#resources .facility-motion-trigger > .demo-poster { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+#resources .facility-motion-trigger:focus-visible { outline: 2px solid var(--blue-ink); outline-offset: 3px; }
+#resources .facility-gimbal-demos h5 { margin: 12px 14px 6px; font-size: 15px; line-height: 22px; }
+@media (max-width: 700px) {
+  #resources .facility-research-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  #resources .facility-research-layout img { height: 260px; }
+  #resources .facility-specs { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  #resources .facility-specs dd { margin-bottom: 12px; }
+  #resources .facility-research-photos, #resources .facility-gimbal-demos .demo-grid { grid-template-columns: minmax(0, 1fr); }
+}
