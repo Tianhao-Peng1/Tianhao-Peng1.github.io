@@ -7,6 +7,9 @@
   const compact = window.matchMedia('(max-width: 800px)');
   const main = document.getElementById('content');
   const home = document.getElementById('home');
+  const homeAddress = window.location.pathname + window.location.search;
+  const pageAddress = hash => homeAddress + (hash === '#top' ? '' : hash);
+  for (const link of document.querySelectorAll('a[href="./"]')) link.setAttribute('href', homeAddress);
   const links = [...nav.querySelectorAll('a')];
   const sections = [...main.querySelectorAll(':scope > .section')];
   const pages = new Map([['#top', home], ...sections.map(section => ['#' + section.id, section])]);
@@ -45,7 +48,9 @@
 
   function showPage(focusContent = false) {
     const target = redirects.get(window.location.hash);
-    if (target) history.replaceState(null, '', target);
+    if (target || window.location.hash === '#top') {
+      history.replaceState(history.state, '', pageAddress(target || '#top'));
+    }
     const fragment = window.location.hash;
     const teamTab = teamTabsByHash.get(fragment);
     const sectionAnchor = sectionAnchors.get(fragment);
@@ -56,9 +61,9 @@
     for (const section of pages.values()) section.hidden = section !== page;
     if (teamTab) activateTeamTab(teamTab);
     currentLink?.removeAttribute('aria-current');
-    currentLink = links.find(link => link.hash === hash);
+    currentLink = links.find(link => (link.hash || '#top') === hash);
     currentLink?.setAttribute('aria-current', 'page');
-    backToTop.setAttribute('href', teamTab && teamTab !== leaderTab ? fragment : hash);
+    backToTop.setAttribute('href', pageAddress(teamTab && teamTab !== leaderTab ? fragment : hash));
     setMenu(false);
     if (anchor) {
       syncHeaderOffset();
@@ -97,12 +102,18 @@
     syncHeaderOffset();
   });
   document.addEventListener('click', event => {
-    const link = event.target.closest('a[href^="#"]');
-    if (!link || (!pages.has(link.hash) && !teamTabsByHash.has(link.hash) && !sectionAnchors.has(link.hash)) ||
+    const link = event.target.closest('a[href]');
+    const hash = link?.hash || '#top';
+    if (!link || link.origin !== window.location.origin || link.pathname !== window.location.pathname ||
+        link.search !== window.location.search ||
+        (!pages.has(hash) && !teamTabsByHash.has(hash) && !sectionAnchors.has(hash) && !redirects.has(hash)) ||
         event.defaultPrevented || event.button !== 0 ||
         event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
-    if (window.location.hash !== link.hash) history.pushState(null, '', link.hash);
+    const address = pageAddress(hash);
+    if (window.location.pathname + window.location.search + window.location.hash !== address) {
+      history.pushState(null, '', address);
+    }
     showPage(true);
   });
   window.addEventListener('hashchange', () => showPage(true));
@@ -222,7 +233,7 @@
   bindTabs(teamTabList, teamTabs, selected => {
     if (selected.getAttribute('aria-selected') === 'true') return;
     const hash = selected === leaderTab ? '#mentor' : '#' + selected.getAttribute('aria-controls');
-    history.pushState(null, '', hash);
+    history.pushState(null, '', pageAddress(hash));
     showPage();
   });
 
