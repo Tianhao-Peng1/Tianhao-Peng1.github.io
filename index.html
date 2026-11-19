@@ -10,7 +10,7 @@
     (() => {
       // Safari 18 can retain a favicon for the bare homepage URL after the icon changes.
       const home = new URL(window.location.href);
-      if (home.origin !== 'https://tianhao-peng1.github.io' || home.pathname !== '/') return;
+      if (home.origin !== 'https://admirelab.ai' || home.pathname !== '/') return;
       if (!/\bVersion\/18\.[\d.]+ Safari\//.test(navigator.userAgent)) return;
       home.pathname = '/index.html';
       window.location.replace(home.href);
@@ -19,7 +19,7 @@
 
   <title>ADMIRE Research Group | Beihang University</title>
   <meta name="description" content="The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.">
-  <link rel="canonical" href="https://tianhao-peng1.github.io/">
+  <link rel="canonical" href="https://admirelab.ai/">
   <link rel="icon" href="assets/icons/admire-a-favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/icons/admire-mark-180.png?v=20261114-logo" sizes="180x180">
   <meta name="theme-color" content="#005bac">
@@ -28,15 +28,15 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="ADMIRE Research Group | Beihang University">
   <meta property="og:description" content="The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.">
-  <meta property="og:url" content="https://tianhao-peng1.github.io/">
-  <meta property="og:image" content="https://tianhao-peng1.github.io/assets/images/banquet-2026-01.jpg">
+  <meta property="og:url" content="https://admirelab.ai/">
+  <meta property="og:image" content="https://admirelab.ai/assets/images/banquet-2026-01.jpg">
   <meta property="og:image:width" content="1707">
   <meta property="og:image:height" content="1280">
   <meta property="og:image:alt" content="ADMIRE group photo, January 2026">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "name": "ADMIRE Research Group", "alternateName": ["ADMIRE", "Adaptive Distributed Multi-agent Intelligence via Recursive Evolution", "ADMIRE 课题组"], "url": "https://tianhao-peng1.github.io/", "logo": "https://tianhao-peng1.github.io/assets/icons/admire-mark-180.png", "description": "The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Beihang University", "alternateName": "北京航空航天大学", "url": "https://ev.buaa.edu.cn/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "name": "ADMIRE Research Group", "alternateName": ["ADMIRE", "Adaptive Distributed Multi-agent Intelligence via Recursive Evolution", "ADMIRE 课题组"], "url": "https://admirelab.ai/", "logo": "https://admirelab.ai/assets/icons/admire-mark-180.png", "description": "The ADMIRE Research Group at Beihang University studies adaptive multi-agent systems across software, embodied intelligence and scientific discovery.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Beihang University", "alternateName": "北京航空航天大学", "url": "https://ev.buaa.edu.cn/"}}</script>
 
-  <link rel="stylesheet" href="assets/site.css?v=20261115-navigation">
+  <link rel="stylesheet" href="assets/site.css?v=20261120-media">
   <link rel="stylesheet" href="assets/facilities.css?v=20261119-overview">
   <link rel="stylesheet" href="assets/facilities-research.css?v=20261119-ppt">
   <script src="assets/i18n/catalog.js?v=20261119-facilities" defer></script>
@@ -44,7 +44,7 @@
   <script src="assets/facilities-research-i18n.js?v=20261119-ppt" defer></script>
   <script src="assets/site.js?v=20261115-navigation" defer></script>
   <script src="assets/i18n.js?v=20261114-roster" defer></script>
-  <script src="assets/project-demos.js?v=20261113-figures" defer></script>
+  <script src="assets/project-demos.js?v=20261120-media" defer></script>
 </head>
 
 <body>
@@ -152,14 +152,14 @@
             <section aria-labelledby="home-demo-title">
               <h2 id="home-demo-title">实验演示</h2>
               <figure class="home-demo">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4?v=20261120-media" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
                   <img class="demo-poster" src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
                   <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration" aria-hidden="true">01:43</span>
                 </button>
                 <figcaption>多智能体协同控制实验平台</figcaption>
               </figure>
               <figure class="home-demo">
-                <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4?v=20261120-media" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
                   <img class="demo-poster" src="assets/open-source/uav-navigation-swarm-clean.webp" alt="无人机在室内沙盘场地进行飞行实验" width="960" height="540" loading="lazy" decoding="async">
                   <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration" aria-hidden="true">02:05</span>
                 </button>
@@ -675,7 +675,7 @@
                   <figcaption><time datetime="2026-06">2026.06</time></figcaption>
                 </figure>
                 <figure class="image-card">
-                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="2024 年 6 月课题组合影"><img class="team-photo-bottom" src="assets/images/banquet-2024-06.jpg" alt="2024 年 6 月课题组合影" width="4032" height="3024" decoding="async" loading="lazy"></button>
+                  <button class="image-open" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-title="2024 年 6 月课题组合影"><img class="team-photo-bottom" src="assets/images/banquet-2024-06.jpg?v=20261120-media" alt="2024 年 6 月课题组合影" width="4032" height="3024" decoding="async" loading="lazy"></button>
                   <figcaption><time datetime="2024-06">2024.06</time></figcaption>
                 </figure>
                 <figure class="image-card">
@@ -3711,19 +3711,19 @@
                   </button>
                   <h4>空地协同虚实融合验证平台</h4><p>目标搜索、协同打击、空地护送三阶段任务，仿真集群与实物集群同步验证</p>
                 </article><article class="demo-card platform-card" data-platform="control">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/multi-agent-control.mp4?v=20261120-media" data-demo-title="多智能体协同控制实验平台" data-demo-description="展示多智能体仿真环境、室内无人机编队与多机协同实验，包括集结、编队重构等任务。" aria-label="播放多智能体协同控制实验平台视频，1 分 43 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
                     <img class="demo-poster" src="assets/platforms/multi-agent-control.webp" alt="多架无人机在室内实验场地开展编队协同实验" width="960" height="540" loading="lazy" decoding="async">
                     <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">01:43</span>
                   </button>
                   <h4>多智能体协同控制实验平台</h4><p>多智能体仿真与室内无人机编队协同实验</p>
                 </article><article class="demo-card platform-card" data-platform="urban-sandbox">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/urban-sandbox-air-ground.mp4" data-demo-title="城市沙盘空地协同实验平台" data-demo-description="在包含道路、建筑与山地模型的室内城市沙盘中，展示无人机飞行与地面车辆运行，为空地协同任务提供实物实验环境。" aria-label="播放城市沙盘空地协同实验平台视频，2 分 2 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/urban-sandbox-air-ground.mp4?v=20261120-media" data-demo-title="城市沙盘空地协同实验平台" data-demo-description="在包含道路、建筑与山地模型的室内城市沙盘中，展示无人机飞行与地面车辆运行，为空地协同任务提供实物实验环境。" aria-label="播放城市沙盘空地协同实验平台视频，2 分 2 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
                     <img class="demo-poster" src="assets/platforms/urban-sandbox-air-ground.webp" alt="室内城市沙盘中的无人机、地面车辆与道路建筑模型" width="480" height="272" loading="lazy" decoding="async">
                     <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:02</span>
                   </button>
                   <h4>城市沙盘空地协同实验平台</h4><p>城市道路与建筑沙盘中的无人机、地面车辆实验</p>
                 </article></div></div><div class="facility-video-group"><h4 id="facility-video-navigation" tabindex="-1" data-section-anchor="">视觉语言导航</h4><div class="demo-grid"><article class="demo-card">
-                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
+                  <button class="demo-trigger" type="button" data-demo-src="assets/videos/uav-navigation-swarm.mp4?v=20261120-media" data-demo-title="无人机导航与群体协同实验" data-demo-description="AERIS：由语言模型编排的空中边缘角色驱动智能，包含视觉语言导航与室内多机实飞片段。" aria-label="播放无人机导航与群体协同实验视频，2 分 5 秒" aria-haspopup="dialog" aria-controls="demo-dialog">
                     <img class="demo-poster" src="assets/open-source/uav-navigation-swarm-clean.webp" alt="无人机在室内沙盘场地进行飞行实验" width="960" height="540" loading="lazy" decoding="async">
                     <span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" alt="" width="24" height="24"></span><span class="demo-duration">02:05</span>
                   </button>
@@ -3743,7 +3743,7 @@
                 </article></div></div>            <div class="facility-video-group facility-gimbal-demos" aria-labelledby="facility-video-gimbal">
               <h4 id="facility-video-gimbal" tabindex="-1" data-section-anchor>吊舱与线路巡检动态演示</h4>
               <div class="demo-grid">
-                <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/gimbal-stabilization.webp" data-title="吊舱稳定控制" data-description="吊舱硬件与稳定控制动态展示。"><img class="demo-poster" src="assets/facilities/research/gimbal-stabilization-poster.webp" alt="吊舱稳定控制" width="400" height="533" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>吊舱稳定控制</h5><p>吊舱硬件与稳定控制动态展示。</p></article>
+                <article class="demo-card"><button class="demo-trigger facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="demo-dialog" data-demo-src="assets/videos/gimbal-stabilization.mp4?v=20261120-media" data-demo-title="吊舱稳定控制" data-demo-description="吊舱硬件与稳定控制动态展示。" aria-label="吊舱稳定控制"><img class="demo-poster" src="assets/facilities/research/gimbal-stabilization-poster.webp" alt="吊舱稳定控制" width="400" height="533" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>吊舱稳定控制</h5><p>吊舱硬件与稳定控制动态展示。</p></article>
                 <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/line-inspection.webp" data-title="可见光与红外巡检" data-description="巡航拍摄中的可见光、红外画面与目标检测。"><img class="demo-poster" src="assets/facilities/research/line-inspection-poster.webp" alt="可见光与红外巡检" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>可见光与红外巡检</h5><p>巡航拍摄中的可见光、红外画面与目标检测。</p></article>
                 <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/defect-detection.webp" data-title="输电线路缺陷检测" data-description="巡检平台的检测任务配置与结果展示。"><img class="demo-poster" src="assets/facilities/research/defect-detection-poster.webp" alt="输电线路缺陷检测" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>输电线路缺陷检测</h5><p>巡检平台的检测任务配置与结果展示。</p></article>
                 <article class="demo-card"><button class="image-open facility-motion-trigger" type="button" aria-haspopup="dialog" aria-controls="lightbox" data-src="assets/facilities/research/inspection-statistics.webp" data-title="检测统计与可视化" data-description="检测数据汇总、图表统计与可视化分析。"><img class="demo-poster" src="assets/facilities/research/inspection-statistics-poster.webp" alt="检测统计与可视化" width="800" height="450" loading="lazy" decoding="async"><span class="demo-play" aria-hidden="true"><img src="assets/icons/play.svg" width="24" height="24" alt=""></span></button><h5>检测统计与可视化</h5><p>检测数据汇总、图表统计与可视化分析。</p></article>
@@ -4233,7 +4233,7 @@
       </main>
       <footer class="pagefoot">
         <div class="container footer-inner">
-          <div><strong>ADMIRE 课题组</strong><p>依托复杂关键软件环境全国重点实验室</p></div>
+          
           <a href="#top">返回顶部</a>
         </div>
       </footer>

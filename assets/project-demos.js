@@ -34,7 +34,7 @@
       },
       {
         title: '四足运动：全身控制与抗扰动', duration: '02:01',
-        src: 'assets/videos/quadruped-control.mp4',
+        src: 'assets/videos/quadruped-control.mp4?v=20261120-media',
         poster: 'assets/platforms/quadruped-control.webp',
         figure: 'quadruped-control',
         summary: '步态、姿态切换、扰动与复杂地形。',
