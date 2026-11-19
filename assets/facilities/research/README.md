@@ -7,6 +7,8 @@ Source materials supplied by the team:
 
 The overlapping gimbal material is consolidated into one hardware subsection. The BJUT equipment is presented separately, without changing the existing robot inventory. No computing equipment quantities are added. Certification information and awards are attributed to the supplied results material rather than treated as independently verified product certification.
 
-Photographs and diagrams are converted to WebP without cropping. The EEG photograph is rotated upright. Six GIF animations are converted to animated WebP, with separate static posters. Playback duration and loop behavior are retained; the encoder merges identical consecutive frames in two animations. Only posters load in the page; animated files load after the visitor opens the existing image lightbox. Closing the lightbox unloads the animation. Text embedded in source diagrams and recordings remains in its original language.
+Photographs and diagrams are converted to WebP without cropping. The EEG photograph is rotated upright. Five GIF animations are served as animated WebP, and the gimbal stabilization sequence is served as an H.264 MP4. Each uses a separate static poster. The full sequences and playback durations are retained. Media loads only after the visitor opens the image lightbox or video player; closing the viewer unloads it. Text embedded in source diagrams and recordings remains in its original language.
 
 The source PPTX files are not published. Existing site media and the Facilities overview remain unchanged.
+
+The original gimbal animated WebP remains available in Git history.
