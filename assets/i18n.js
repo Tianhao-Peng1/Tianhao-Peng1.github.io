@@ -2,7 +2,6 @@
   'use strict';
   const languages = ['zh', 'en', 'fr', 'de', 'es'];
   const languageNames = { zh: '中文', en: 'English', fr: 'Français', de: 'Deutsch', es: 'Español' };
-  const storageKey = 'admire-language-selection';
   const defaultLanguage = 'en';
   const rows = window.ADMIRE_CATALOG || [];
   const normalize = value => value.trim().replace(/\s+/g, ' ');
@@ -16,8 +15,6 @@
   }
   const baseLanguage = value => String(value || '').toLowerCase().split(/[-_]/)[0];
   const browserLanguage = () => (navigator.languages || [navigator.language]).map(baseLanguage).find(code => languages.includes(code)) || defaultLanguage;
-  const readPreference = () => { try { return localStorage.getItem(storageKey); } catch { return null; } };
-  const savedLanguage = readPreference();
   let automatic = false;
   let language = defaultLanguage;
   const attributes = ['alt', 'title', 'aria-label', 'placeholder', 'data-title', 'data-description', 'data-demo-title', 'data-demo-description', 'data-caption'];
@@ -125,12 +122,9 @@
   });
   const observe = () => observer.observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: attributes });
 
-  function applyLanguage(code, persist = false) {
+  function applyLanguage(code, announce = false) {
     automatic = code === 'auto';
     language = automatic ? browserLanguage() : languages.includes(code) ? code : defaultLanguage;
-    if (persist) {
-      try { localStorage.setItem(storageKey, automatic ? 'auto' : language); } catch { /* Private browsing may block storage. */ }
-    }
     observer.disconnect();
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : language;
     walk(document.body);
@@ -145,7 +139,7 @@
       for (const option of options) option.setAttribute('aria-checked', String(option.dataset.language === (automatic ? 'auto' : language)));
     }
     const status = document.getElementById('language-status');
-    if (persist && status) status.textContent = ui.changed[index];
+    if (announce && status) status.textContent = ui.changed[index];
     observe();
     document.dispatchEvent(new CustomEvent('admire:languagechange', { detail: { language, automatic } }));
   }
@@ -198,5 +192,6 @@
   picker?.addEventListener('focusout', event => { if (!picker.contains(event.relatedTarget)) closeMenu(); });
   window.AdmireI18n = { t: translate, setLanguage: applyLanguage, figureSource, get language() { return language; }, get automatic() { return automatic; } };
   window.addEventListener('languagechange', () => { if (automatic) applyLanguage('auto'); });
-  applyLanguage(savedLanguage);
+  // Every page load starts in English; other languages remain an explicit visitor choice.
+  applyLanguage(defaultLanguage);
 })();
